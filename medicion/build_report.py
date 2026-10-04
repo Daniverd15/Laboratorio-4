@@ -167,17 +167,34 @@ def imagen(celda, ruta, ancho_cm, pie=None, tam_pie=6.5):
         runs(q, pie, tam=tam_pie, color=GRIS, cursiva=True)
 
 
+def recorte(nombre, caja):
+    """Recorta la zona relevante de una captura para que el texto sea legible en el informe.
+    El archivo original de evidencias/ no se modifica; el recorte va a una carpeta temporal."""
+    import tempfile
+    from PIL import Image
+    ruta = os.path.join(EV, nombre)
+    if not caja:
+        return ruta
+    d = os.path.join(tempfile.gettempdir(), "lab4_recortes")
+    os.makedirs(d, exist_ok=True)
+    out = os.path.join(d, os.path.splitext(nombre)[0] + "_recorte.png")
+    Image.open(ruta).crop(caja).save(out)
+    return out
+
+
 def cuadricula(items, cols, ancho_total, tam_pie=7):
     filas = (len(items) + cols - 1) // cols
     tt = doc.add_table(rows=filas, cols=cols)
     tt.autofit = False
     sin_bordes(tt)
     w = ancho_total / cols
-    for k, (r, pie) in enumerate(items):
+    for k, it in enumerate(items):
+        r, pie = it[0], it[1]
+        caja = it[2] if len(it) > 2 else None
         c = tt.cell(k // cols, k % cols)
         c.width = Cm(w)
         margenes(c, 10, 10, 15, 15)
-        imagen(c, os.path.join(EV, r), w - 0.3, pie, tam_pie=tam_pie)
+        imagen(c, recorte(r, caja), w - 0.3, pie, tam_pie=tam_pie)
     return tt
 
 
@@ -207,8 +224,9 @@ parrafo("Etapa 1 — AMQP hacia IoT Central (checkpoint cumplido)", negrita=True
 for s_ in [
     "**Cliente:** Apache Qpid **Proton** 0.40. El SDK `azure-iot-device` de **Python no tiene AMQP** (0 archivos lo mencionan; su `websockets` es MQTT-WS).",
     "**Flujo:** TLS **5671** verificado + SASL ANONYMOUS → `open/begin` → nodo `$cbs`: `put-token` con el **SAS firmado a mano** (HMAC-SHA256) → `status-code 200` (10 ms) → enlace `/devices/{id}/messages/events` con **crédito 50** → `transfer` → `disposition accepted` (≈103 ms).",
-    "**Visible en Central:** Datos sin procesar con las 3 variables (Fig. 2), dashboard (Fig. 3) y Explorador de datos (Fig. 5); dispositivo *Conectado*.",
-    "**Qué cambia vs MQTT:** sesión y enlaces; ack por mensaje; **SAS renovable en caliente** (TTL 120 s: 3 renovaciones en 330 s, **0 reconexiones**); más tramas que depurar (`PN_TRACE_FRM`, Fig. 6).",
+    "**Anotado (lo que pide el lab):** puerto **5671** con TLS verificado; **sí aparece** en datos sin procesar (Fig. 2), dashboard (Fig. 3) y Explorador de datos (Fig. 5), dispositivo *Conectado*. "
+    "**Qué cambia vs MQTT:** conexión persistente en ambos, pero AMQP añade **sesión + 3 enlaces** (`$cbs` ×2 y telemetría); tamaño percibido **438 B vs 365 B** por mensaje (+20 %); ack por mensaje; "
+    "**SAS renovable en caliente** (TTL 120 s: 3 renovaciones en 330 s, **0 reconexiones**); debug por tramas (`PN_TRACE_FRM`, Fig. 6).",
     "**Qué resuelve mejor que MQTT:** contrapresión por crédito, liquidación explícita y seguridad en banda. **No** gana en latencia ni en bytes (Sec. 3).",
     "**Tropiezos reales:** el wheel de Proton para Linux **no trae TLS** (se compiló contra OpenSSL); Proton entrega objetos nuevos por evento (los enlaces se comparan por nombre).",
 ]:
@@ -218,7 +236,8 @@ titulo("2. Etapa 2 — Tercer protocolo: HTTPS (REST) hacia IoT Hub / Central")
 parrafo("**Justificación de negocio:** un sensor de batería que despierta cada pocos minutos paga más por mantener una sesión que por una petición, y HTTPS (443) atraviesa los firewalls/proxys del cliente sin abrir puertos. "
         "**Implementación** (`https_telemetria.py`, solo stdlib, 117 líneas): `POST https://{hub}/devices/{id}/messages/events` con `Authorization: SAS` (firmado a mano), `Content-Type: application/json` y `Content-Encoding: utf-8` → `204`. "
         "Hallazgo: sin ese último encabezado el Hub acepta el POST pero **Central no interpreta el JSON**. Depurable con `curl` (204 válido / 401 `IotHubUnauthorizedAccess` con firma alterada). "
-        "También se simuló en el **ESP32 (Wokwi)**: DPS por REST + POST con `HTTPClient` (1.er POST ≈ 4,0 s por el handshake TLS del ESP32; siguientes ≈ 162 ms) y el testigo MQTT (`TCP+TLS+CONNECT` ≈ 3,8 s); ambos llegan a Central (Fig. 7).", tam=8.5)
+        "También se simuló en el **ESP32 (Wokwi)**: DPS por REST + POST con `HTTPClient` (1.er POST ≈ 4,0 s por el handshake TLS del ESP32; siguientes ≈ 162 ms) y el testigo MQTT (`TCP+TLS+CONNECT` ≈ 3,8 s); ambos llegan a Central (Fig. 8). "
+        "**Checkpoint (log + captura):** log del cliente en la VM con `204` en cada envío (Fig. 7) y la telemetría en Central (Fig. 4).", tam=8.5)
 t3 = doc.add_table(rows=1, cols=2)
 t3.autofit = False
 sin_bordes(t3)
@@ -245,7 +264,8 @@ tabla([
 ], [3.2, 1.5, 1.9, 2.1, 1.7, 1.0, 3.3, 2.9], tam=7)
 parrafo("Lectura: la **latencia no distingue** a MQTT, AMQP y HTTPS con keep-alive (el ack tarda ≈100 ms en los tres, mientras un `put-token` AMQP se contesta en 10 ms: domina el Hub); lo que cambia es el **overhead** (MQTT < AMQP < HTTPS), el costo de **abrir** la conexión (AMQP hace SASL+open+begin+CBS+attach ≈ 5 viajes) y **quién** garantiza la entrega "
         "(paho en MQTT QoS 1; la aplicación en AMQP/HTTPS: cola en memoria + backoff ≤ 2 s). Con AMQP hay que **deduplicar por message-id**. "
-        "En MQTT el SAS solo existe en el CONNECT: en 330 s con TTL 120 s el Hub **no** cortó la conexión, pero no debe confiarse en eso.", tam=7.5, despues=2, antes=2)
+        "En MQTT el SAS solo existe en el CONNECT: en 330 s con TTL 120 s el Hub **no** cortó la conexión, pero no debe confiarse en eso. "
+        "Evidencia de las mediciones: `evidencias/05` (bytes y latencia), `06` (corte de red), `07` (renovación del SAS) y los CSV/logs de `mediciones/`.", tam=7.5, despues=2, antes=2)
 
 titulo("4. Repositorio entregable y límites")
 parrafo("**Repo:** https://github.com/Daniverd15/Laboratorio-4 — `amqp/amqp_iothub.py` (script AMQP en la VM), `https/https_telemetria.py` (tercer protocolo), `mqtt/` (línea base), `wokwi/` (ESP32 MQTT y HTTPS), "
@@ -258,15 +278,17 @@ parrafo("**Repo:** https://github.com/Daniverd15/Laboratorio-4 — `amqp/amqp_io
 doc.add_page_break()
 titulo("5. Evidencia en IoT Central y en la VM (misma app lab4-medidordeclima-unab, plantilla Hobo MX-100 v3)")
 cuadricula([
-    ("12-central-amqp-datos-sin-procesar.jpg", "Fig. 2 — AMQP: datos sin procesar con el JSON expandido (temperature, humedad, illuminance); dispositivo Conectado."),
-    ("16-central-dashboard-3-protocolos.jpg", "Fig. 3 — Dashboard: las 3 variables de MQTT, AMQP y HTTPS en la misma app (gráficas y último valor)."),
-    ("13-central-https-datos-sin-procesar.jpg", "Fig. 4 — HTTPS: la telemetría llega cada 5 s, pero el dispositivo figura Desconectado (no hay sesión)."),
-    ("18-central-explorador-datos.jpg", "Fig. 5 — Explorador de datos: Temperature por dispositivo (los 3 protocolos + ESP32)."),
+    ("12-central-amqp-datos-sin-procesar.jpg", "Fig. 2 — AMQP: datos sin procesar con el JSON expandido (temperature, humedad, illuminance); dispositivo Conectado.", (40, 68, 900, 480)),
+    ("16-central-dashboard-3-protocolos.jpg", "Fig. 3 — Dashboard: las 3 variables de MQTT, AMQP y HTTPS en la misma app (gráficas y último valor).", (30, 55, 1375, 640)),
+    ("13-central-https-datos-sin-procesar.jpg", "Fig. 4 — HTTPS: la telemetría llega cada 5 s, pero el dispositivo figura Desconectado (no hay sesión).", (40, 68, 900, 480)),
+    ("18-central-explorador-datos.jpg", "Fig. 5 — Explorador de datos: Temperature por dispositivo (los 3 protocolos + ESP32).", (30, 40, 1510, 690)),
 ], 2, ANCHO)
 cuadricula([
-    ("02-amqp-tramas-proton.png", "Fig. 6 — Tramas AMQP reales (PN_TRACE_FRM): SASL, open, begin, attach $cbs, flow (crédito 50), transfer put-token → disposition accepted y attach del enlace de telemetría (sesión completa: evidencias/02b)."),
-    ("15-central-esp32-datos-sin-procesar.jpg", "Fig. 7 — ESP32 en Wokwi: telemetría por HTTPS (sin eventos de conexión) y por MQTT (Dispositivo conectado/desconectado)."),
-], 2, ANCHO)
+    ("02-amqp-tramas-proton.png", "Fig. 6 — Tramas AMQP reales (PN_TRACE_FRM): SASL, open, begin, attach $cbs, flow (crédito 50), put-token → accepted, attach de telemetría (completo: evidencias/02b)."),
+    ("03-https-vm-log.png", "Fig. 7 — Log del cliente HTTPS en la VM: DPS por REST, POST y HTTP 204 por cada lectura (curl: evidencias/11)."),
+    ("15-central-esp32-datos-sin-procesar.jpg", "Fig. 8 — ESP32 en Wokwi en Central: HTTPS (sin eventos de conexión) y MQTT (conectado/desconectado).", (40, 68, 900, 690)),
+], 3, ANCHO, tam_pie=6.5)
+parrafo("Las capturas de Central muestran hora de Bogotá (UTC−5); los logs de la VM, UTC (p. ej. 0:15 en Central = 05:15 en el log).", tam=6.5, color=GRIS, cursiva=True, despues=1)
 
 titulo("6. Tabla comparativa MQTT · AMQP · HTTPS  (†: de la documentación, no medido aquí)")
 tabla([
@@ -278,7 +300,7 @@ tabla([
     ["Microcontrolador / Wokwi", "**Probado** ESP32 (PubSubClient; TLS 3,8 s)", "**No implementado**: sin cliente ligero estándar en Arduino-ESP32 (el SDK C de Azure sí, pesado†)", "**Probado** ESP32 (HTTPClient; 4,0 s + 162 ms)"],
     ["Facilidad de debug", "Media (`IOTC_DEBUG`: paquetes crudos)", "Baja–media (`PN_TRACE_FRM`: estructuras + payload binario)", "**Alta** (`curl -i`, códigos estándar)"],
     ["Paso de firewalls", "8883 a veces bloqueado → **MQTT-WS 443 probado** (370 B/msg)", "5671; AMQP-WS 443† (Proton Python no lo expone)", "**443**, atraviesa proxys"],
-    ["Comandos / estado en Central", "Métodos directos: `setAlertLed` → 200 (medido) · *Conectado*", "Sí† · *Conectado* (medido)", "No† · *Desconectado* (medido)"],
+    ["Comandos / estado en Central", "Métodos directos: `setAlertLed` → 200 (medido) · *Conectado*", "Comandos: sí† · estado: *Conectado* (medido)", "Comandos: no† · estado: *Desconectado* (medido)"],
     ["Complejidad real (líneas de código)", "130", "**255** + compilar Proton con TLS en Linux", "117"],
     ["Caso de uso ideal", "Telemetría continua de dispositivos", "Plano de servicio, *pipelines* con contrapresión, gateways†", "Sensores que duermen minutos; integración y diagnóstico"],
 ], [3.6, 4.6, 5.3, 5.1], tam=7)

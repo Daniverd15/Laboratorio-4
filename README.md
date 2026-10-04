@@ -116,6 +116,8 @@ Dónde viaja el mismo SAS en cada protocolo: **MQTT** → campo *password* del C
 
 **Modo alternativo sin CBS** (`IOTC_AMQP_AUTH=plain`, `mediciones/log_amqp_sasl_plain.txt`): SASL PLAIN con usuario `<id>@sas.<hub>` y el SAS como clave; también funciona y queda listo para enviar en ≈123 ms (un viaje menos que con CBS), pero **pierde la renovación del SAS en banda**.
 
+**¿Cómo se demuestra que fue AMQP y no otro transporte?** (1) el dispositivo `amqp-lab4` solo lo usa `amqp/amqp_iothub.py`; (2) el log muestra `amqps://<hub>:5671` y las tramas reales `open/begin/attach/flow/transfer/disposition` (`evidencias/02`, `02b`); (3) en el benchmark los contadores `iptables` de la corrida `amqp` suman tráfico **solo en el puerto 5671** (`mediciones/bytes.csv`); (4) Central recibe esas lecturas en el dispositivo `AMQP 5671` (`evidencias/12`).
+
 **¿Qué problema resuelve AMQP mejor que MQTT?** (a) *Control de flujo* por crédito: el receptor decide cuánto recibe (contrapresión);
 (b) *liquidación explícita* por mensaje con tres resultados; (c) *seguridad en banda*: el token se renueva sin tirar la conexión
 (experimento: SAS de 120 s, 3 renovaciones en 330 s, **0 reconexiones**, `evidencias/07`); (d) es el protocolo nativo del plano de
@@ -234,5 +236,7 @@ conexiones abiertas es perezosa); no debe confiarse en eso.
 | `18-central-explorador-datos.jpg` | Explorador de datos: Temperature por dispositivo (MQTT, AMQP, HTTPS y ESP32) |
 | `12/13/14/15-central-*-datos-sin-procesar.jpg` | **Telemetría real en Central** (AMQP con JSON expandido, HTTPS *Desconectado*, MQTT, ESP32) |
 | `20-azure-recursos.jpg` | Grupo de recursos: IoT Central + VM |
+
+*Las capturas de Central muestran hora de Bogotá (UTC−5); los logs de la VM están en UTC (p. ej. 0:15 en Central = 05:15 en el log).*
 
 *Los `.png` de logs se generan con `medicion/render_evidencias.py` a partir de los archivos de `mediciones/` (solo se recortan líneas y se colorean etiquetas).*
