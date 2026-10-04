@@ -1,0 +1,26 @@
+$ systemctl status lab4-mqtt lab4-amqp lab4-https --no-pager | grep -E "●|Active"
+● lab4-mqtt.service - Lab 4 UNAB-Ambiental - MQTT explicito (paho) hacia IoT Central
+     Active: active (running) since Sun 2026-10-04 05:12:04 UTC; 32min ago
+● lab4-amqp.service - Lab 4 UNAB-Ambiental - AMQP 1.0 (Proton) hacia IoT Central
+     Active: active (running) since Sun 2026-10-04 05:12:04 UTC; 32min ago
+● lab4-https.service - Lab 4 UNAB-Ambiental - HTTPS REST hacia IoT Central
+     Active: active (running) since Sun 2026-10-04 05:12:04 UTC; 32min ago
+
+$ journalctl -u lab4-mqtt -n 4
+05:44:44.476 [TX #392] PUBLISH topic=devices/mqtt-lab4/messages/events/ qos=1 bytes=53 payload={"temperature":31.3,"humedad":43.1,"illuminance":220}
+05:44:44.580 [ACK #392] PUBACK en 105 ms (qos=1)
+05:44:49.481 [TX #393] PUBLISH topic=devices/mqtt-lab4/messages/events/ qos=1 bytes=53 payload={"temperature":20.1,"humedad":57.8,"illuminance":573}
+05:44:49.585 [ACK #393] PUBACK en 103 ms (qos=1)
+
+$ journalctl -u lab4-amqp -n 4
+05:44:44.235 [TX #392] transfer bytes=53 credito_restante=8 payload={"temperature":20.6,"humedad":56.6,"illuminance":689}
+05:44:44.341 [ACK #392] disposicion 'accepted' del Hub en 105 ms
+05:44:49.250 [TX #393] transfer bytes=53 credito_restante=7 payload={"temperature":31.4,"humedad":69.9,"illuminance":332}
+05:44:49.363 [ACK #393] disposicion 'accepted' del Hub en 113 ms
+
+$ journalctl -u lab4-https -n 4
+05:44:34.386 [TX #390] POST bytes=53 -> HTTP 204 en 108 ms  payload={"temperature":23.7,"humedad":66.1,"illuminance":410}
+05:44:39.347 [TX #391] POST bytes=53 -> HTTP 204 en 99 ms  payload={"temperature":28.3,"humedad":43.0,"illuminance":745}
+05:44:44.365 [TX #392] POST bytes=53 -> HTTP 204 en 106 ms  payload={"temperature":23.2,"humedad":44.4,"illuminance":743}
+05:44:49.386 [TX #393] POST bytes=53 -> HTTP 204 en 110 ms  payload={"temperature":22.1,"humedad":69.8,"illuminance":313}
+

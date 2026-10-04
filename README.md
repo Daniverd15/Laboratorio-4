@@ -79,7 +79,8 @@ IOTC_N=5 IOTC_QOS=1 python mqtt/mqtt_baseline.py                   # MQTT (IOTC_
 
 Mediciones (en la VM, con `sudo` para `iptables`): `medicion/bench_bytes.sh` (bytes + latencias),
 `MODO=reset|drop medicion/corte_red.sh` (corte de 16 s), y `python3 medicion/*_resumen.py` para las tablas.
-Servicios: `sudo cp systemd/lab4-*.service /etc/systemd/system/ && sudo systemctl enable --now lab4-amqp lab4-mqtt lab4-https`.
+Servicios: `sudo cp systemd/lab4-*.service /etc/systemd/system/ && sudo systemctl enable --now lab4-amqp lab4-mqtt lab4-https`
+(los tres corrieron ≈ 35 min seguidos enviando cada 5 s: `mediciones/log_servicios_vm.txt`; en AMQP el crédito del enlace se repone solo, ver `credito_restante`).
 
 ## 5. Credenciales y SAS — sin secretos en el repo
 
