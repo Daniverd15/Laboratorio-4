@@ -3,6 +3,7 @@
 
 **Materia:** IoT + Cloud + Sistemas Distribuidos — Universidad Autónoma de Bucaramanga (UNAB)
 **Escenario:** UNAB-Ambiental · plantilla `Hobo MX-100 v3` · 3 variables: `temperature`, `humedad`, `illuminance`
+**Integrantes:** Daniel Villamizar · Tomás Urieles · David Guerrero
 **Repositorio:** <https://github.com/Daniverd15/Laboratorio-4>
 
 Este laboratorio cambia el **transporte** del dispositivo sin cambiar la aplicación: las mismas 3 variables

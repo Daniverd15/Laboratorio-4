@@ -201,7 +201,8 @@ def cuadricula(items, cols, ancho_total, tam_pie=7):
 # ------------------------------------------------------------------ PAGINA 1
 parrafo("Laboratorio 4 — AMQP + tercer protocolo (HTTPS) frente a MQTT, hacia Azure IoT Central", negrita=True, tam=12.5, color=AZUL, despues=0)
 parrafo("IoT + Cloud + Sistemas Distribuidos · UNAB · Escenario UNAB-Ambiental · App IoT Central: lab4-medidordeclima-unab · "
-        "Repositorio: https://github.com/Daniverd15/Laboratorio-4", tam=7.5, color=GRIS, despues=2)
+        "Repositorio: https://github.com/Daniverd15/Laboratorio-4", tam=7.5, color=GRIS, despues=0)
+parrafo("Integrantes: Daniel Villamizar · Tomás Urieles · David Guerrero", negrita=True, tam=8.5, despues=2)
 
 titulo("1. Qué se hizo y rol de AMQP en Azure")
 parrafo("Se publicaron las **mismas 3 variables** (temperature, humedad, illuminance; 53 B de JSON) a la **misma app de IoT Central** por tres transportes desde una VM Azure "
