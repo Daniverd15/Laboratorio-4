@@ -1,0 +1,72 @@
+04:44:50.116 [DPS] HTTPS PUT https://global.azure-devices-provisioning.net/0ne00FE0A30/registrations/amqp-lab4/register  (SAS sr=0ne00FE0A30/registrations/amqp-lab4)
+04:44:52.404 [DPS] HTTPS GET operations -> 200 status=assigned
+04:44:52.404 [DPS] asignado -> iotc-5ce70e27-5a44-4297-8294-5533402ae4d9.azure-devices.net
+04:44:52.405 [AMQP] Conectando a amqps://iotc-5ce70e27-5a44-4297-8294-5533402ae4d9.azure-devices.net:5671  (TLS verificado, SASL ANONYMOUS + CBS)
+[0x5ad3d30f95b0]: SASL:FRAME:  -> SASL
+[0x5ad3d30f95b0]: SASL:FRAME:  <- SASL
+[0x5ad3d30f95b0]: AMQP:FRAME:0 <- @sasl-mechanisms(64) [sasl-server-mechanisms=@<symbol>[:PLAIN, :ANONYMOUS, :MSSBCBS, :EXTERNAL]]
+[0x5ad3d30f95b0]: AMQP:FRAME:0 -> @sasl-init(65) [mechanism=:ANONYMOUS, initial-response=b"anonymous@vm-lab4-iot"]
+[0x5ad3d30f95b0]: AMQP:FRAME:0 <- @sasl-outcome(68) [code=0x0]
+[0x5ad3d30f95b0]: AMQP:FRAME:  -> AMQP
+[0x5ad3d30f95b0]: AMQP:FRAME:0 -> @open(16) [container-id="769aae74-d992-44d0-a7a6-5d4972b7c4ae", hostname="iotc-5ce70e27-5a44-4297-8294-5533402ae4d9.azure-devices.net", max-frame-size=0x8000, channel-max=0x7fff, idle-time-out=0x7530]
+[0x5ad3d30f95b0]: AMQP:FRAME:  <- AMQP
+[0x5ad3d30f95b0]: AMQP:FRAME:0 <- @open(16) [container-id="603324d17f7a4400b5ce985caafe67b2", max-frame-size=0xffff, channel-max=0x400, idle-time-out=0x3a980]
+04:44:52.546 [AMQP] OPEN del Hub recibido: conexion lista en 141 ms (TCP+TLS+SASL+Open)
+04:44:52.546 [CBS] Enlaces abiertos hacia el nodo '$cbs' (sender + receiver)
+[0x5ad3d30f95b0]: AMQP:FRAME:0 -> @begin(17) [next-outgoing-id=0x0, incoming-window=0x7fffffff, outgoing-window=0x7fffffff, handle-max=0x7fffffff]
+[0x5ad3d30f95b0]: AMQP:FRAME:0 -> @attach(18) [name="cbs-tx-5c10a3", handle=0x0, role=false, snd-settle-mode=0x2, rcv-settle-mode=0x0, source=@source(40) [durable=0x0, timeout=0x0, dynamic=false], target=@target(41) [address="$cbs", durable=0x0, timeout=0x0, dynamic=false], initial-delivery-count=0x0, max-message-size=0x0]
+[0x5ad3d30f95b0]: AMQP:FRAME:0 -> @attach(18) [name="cbs-rx-f5eb24", handle=0x1, role=true, snd-settle-mode=0x2, rcv-settle-mode=0x0, source=@source(40) [address="$cbs", durable=0x0, timeout=0x0, dynamic=false], target=@target(41) [address="cbs", durable=0x0, timeout=0x0, dynamic=false], initial-delivery-count=0x0, max-message-size=0x0]
+[0x5ad3d30f95b0]: AMQP:FRAME:0 -> @flow(19) [incoming-window=0x7fffffff, next-outgoing-id=0x0, outgoing-window=0x7fffffff, handle=0x1, delivery-count=0x0, link-credit=0xa, drain=false]
+[0x5ad3d30f95b0]: AMQP:FRAME:0 <- @begin(17) [remote-channel=0x0, next-outgoing-id=0x1, incoming-window=0x1388, outgoing-window=0x7fffffff, handle-max=0xffffffff]
+[0x5ad3d30f95b0]: AMQP:FRAME:0 <- @attach(18) [name="cbs-rx-f5eb24", handle=0x1, role=false, snd-settle-mode=0x2, rcv-settle-mode=0x0, source=@source(40) [address="$cbs", durable=0x0, expiry-policy=:session-end, timeout=0x0, dynamic=false], target=@target(41) [address="cbs", durable=0x0, expiry-policy=:session-end, timeout=0x0, dynamic=false], incomplete-unsettled=false, initial-delivery-count=0x0, max-message-size=0x400]
+[0x5ad3d30f95b0]: AMQP:FRAME:0 <- @attach(18) [name="cbs-tx-5c10a3", handle=0x0, role=true, snd-settle-mode=0x2, rcv-settle-mode=0x0, source=@source(40) [durable=0x0, expiry-policy=:session-end, timeout=0x0, dynamic=false], target=@target(41) [address="$cbs", durable=0x0, expiry-policy=:session-end, timeout=0x0, dynamic=false], incomplete-unsettled=false, initial-delivery-count=0x0, max-message-size=0x100000]
+[0x5ad3d30f95b0]: AMQP:FRAME:0 <- @flow(19) [next-incoming-id=0x0, incoming-window=0x1388, next-outgoing-id=0x0, outgoing-window=0x7fffffff, handle=0x0, delivery-count=0x0, link-credit=0x32, drain=false, echo=false]
+04:44:52.556 [SAS] token generado a mano (sr=iotc-5ce70e27-5a44-4297-8294-5533402ae4d9.azure-devices.net/devices/amqp-lab4, ttl=3600s) -> put-token enviado al nodo $cbs
+[0x5ad3d30f95b0]: AMQP:FRAME:0 -> @transfer(20) [handle=0x0, delivery-id=0x0, delivery-tag=b"1", message-format=0x0] (386) \x00SpE\x00Ss\xc0+\x05\xa1 9ae72cc6166a4d63a5663d6759387035@@@\xa1\x03cbs\x00St\xd1\x00\x00\x00\x96\x00\x00\x00\x06\xa1\x09operation\xa1\x09put-token\xa1\x04type\xa1\x1fservicebus.windows.net:sastoken\xa1\x04name\xa1Miotc-5ce70e27-5a44-4297-8294-5533402ae4d9.azure-devices.net/devices/amqp-lab4\x00Sw\xa1\xabSharedAccessSignature sr=iotc-5ce70e27-5a44-4297-8294-5533402ae4d9.azure-devices.net%2Fdevices%2Famqp-lab4&sig=L1NWM8XAZmSBQMHti8x4aKCXG7BN2aYoBKQY4x7ikH4%3D&se=1791092692
+[0x5ad3d30f95b0]: AMQP:FRAME:0 <- @disposition(21) [role=true, first=0x0, settled=true, state=@accepted(36) [], batchable=false]
+[0x5ad3d30f95b0]: AMQP:FRAME:0 <- @transfer(20) [handle=0x1, delivery-id=0x0, delivery-tag=b"\x00\x00\x00\x00", message-format=0x0, more=false, resume=false, aborted=false, batchable=false] (100) \x00Ss\xc0/\x0d@@@@@\xa1 9ae72cc6166a4d63a5663d6759387035@@@@@@@\x00St\xc1+\x04\xa1\x0bstatus-codeq\x00\x00\x00\xc8\xa1\x12status-description\xa1\x02OK
+04:44:52.567 [CBS] respuesta put-token: status-code=200 (OK) en 11 ms
+04:44:52.567 [AMQP] ATTACH enlace de telemetria -> /devices/amqp-lab4/messages/events
+[0x5ad3d30f95b0]: AMQP:FRAME:0 -> @attach(18) [name="tx-528d8e", handle=0x2, role=false, snd-settle-mode=0x2, rcv-settle-mode=0x0, source=@source(40) [durable=0x0, timeout=0x0, dynamic=false], target=@target(41) [address="/devices/amqp-lab4/messages/events", durable=0x0, timeout=0x0, dynamic=false], initial-delivery-count=0x0, max-message-size=0x0]
+[0x5ad3d30f95b0]: AMQP:FRAME:0 -> @disposition(21) [role=true, first=0x0, settled=true, state=@accepted(36) []]
+[0x5ad3d30f95b0]: AMQP:FRAME:0 <- @attach(18) [name="tx-528d8e", handle=0x2, role=true, snd-settle-mode=0x2, rcv-settle-mode=0x0, source=@source(40) [durable=0x0, expiry-policy=:session-end, timeout=0x0, dynamic=false], target=@target(41) [address="/devices/amqp-lab4/messages/events", durable=0x0, expiry-policy=:session-end, timeout=0x0, dynamic=false], incomplete-unsettled=false, initial-delivery-count=0x0, max-message-size=0x100000]
+[0x5ad3d30f95b0]: AMQP:FRAME:0 <- @flow(19) [next-incoming-id=0x1, incoming-window=0x1388, next-outgoing-id=0x1, outgoing-window=0x7ffffffe, handle=0x2, delivery-count=0x0, link-credit=0x32, drain=false, echo=false]
+04:44:52.578 [AMQP] enlace de telemetria abierto (credito inicial=50)
+04:44:52.578 [TX #1] transfer bytes=53 credito_restante=49 payload={"temperature":24.1,"humedad":57.9,"illuminance":178}
+[0x5ad3d30f95b0]: AMQP:FRAME:0 -> @transfer(20) [handle=0x2, delivery-id=0x1, delivery-tag=b"1", message-format=0x0] (111) \x00SpE\x00Ss\xc0,\x08\xa1\x0bamqp-lab4-1@@@@@\xa3\x10application/json\xa3\x05utf-8\x00Su\xa05{\x22temperature\x22:24.1,\x22humedad\x22:57.9,\x22illuminance\x22:178}
+[0x5ad3d30f95b0]: AMQP:FRAME:0 <- @disposition(21) [role=true, first=0x1, settled=true, state=@accepted(36) [], batchable=false]
+04:44:52.756 [ACK #1] disposicion 'accepted' del Hub en 178 ms
+04:44:54.549 [TX #2] transfer bytes=53 credito_restante=48 payload={"temperature":23.4,"humedad":54.0,"illuminance":691}
+[0x5ad3d30f95b0]: AMQP:FRAME:0 -> @transfer(20) [handle=0x2, delivery-id=0x2, delivery-tag=b"2", message-format=0x0] (111) \x00SpE\x00Ss\xc0,\x08\xa1\x0bamqp-lab4-2@@@@@\xa3\x10application/json\xa3\x05utf-8\x00Su\xa05{\x22temperature\x22:23.4,\x22humedad\x22:54.0,\x22illuminance\x22:691}
+[0x5ad3d30f95b0]: AMQP:FRAME:0 <- @disposition(21) [role=true, first=0x2, settled=true, state=@accepted(36) [], batchable=false]
+04:44:54.650 [ACK #2] disposicion 'accepted' del Hub en 101 ms
+04:44:56.552 [TX #3] transfer bytes=53 credito_restante=47 payload={"temperature":26.4,"humedad":43.9,"illuminance":601}
+[0x5ad3d30f95b0]: AMQP:FRAME:0 -> @transfer(20) [handle=0x2, delivery-id=0x3, delivery-tag=b"3", message-format=0x0] (111) \x00SpE\x00Ss\xc0,\x08\xa1\x0bamqp-lab4-3@@@@@\xa3\x10application/json\xa3\x05utf-8\x00Su\xa05{\x22temperature\x22:26.4,\x22humedad\x22:43.9,\x22illuminance\x22:601}
+[0x5ad3d30f95b0]: AMQP:FRAME:0 <- @disposition(21) [role=true, first=0x3, settled=true, state=@accepted(36) [], batchable=false]
+04:44:56.654 [ACK #3] disposicion 'accepted' del Hub en 101 ms
+04:44:58.555 [TX #4] transfer bytes=53 credito_restante=46 payload={"temperature":21.4,"humedad":54.0,"illuminance":233}
+[0x5ad3d30f95b0]: AMQP:FRAME:0 -> @transfer(20) [handle=0x2, delivery-id=0x4, delivery-tag=b"4", message-format=0x0] (111) \x00SpE\x00Ss\xc0,\x08\xa1\x0bamqp-lab4-4@@@@@\xa3\x10application/json\xa3\x05utf-8\x00Su\xa05{\x22temperature\x22:21.4,\x22humedad\x22:54.0,\x22illuminance\x22:233}
+[0x5ad3d30f95b0]: AMQP:FRAME:0 <- @disposition(21) [role=true, first=0x4, settled=true, state=@accepted(36) [], batchable=false]
+04:44:58.659 [ACK #4] disposicion 'accepted' del Hub en 103 ms
+04:45:00.559 [TX #5] transfer bytes=53 credito_restante=45 payload={"temperature":23.5,"humedad":56.2,"illuminance":541}
+[0x5ad3d30f95b0]: AMQP:FRAME:0 -> @transfer(20) [handle=0x2, delivery-id=0x5, delivery-tag=b"5", message-format=0x0] (111) \x00SpE\x00Ss\xc0,\x08\xa1\x0bamqp-lab4-5@@@@@\xa3\x10application/json\xa3\x05utf-8\x00Su\xa05{\x22temperature\x22:23.5,\x22humedad\x22:56.2,\x22illuminance\x22:541}
+[0x5ad3d30f95b0]: AMQP:FRAME:0 <- @disposition(21) [role=true, first=0x5, settled=true, state=@accepted(36) [], batchable=false]
+04:45:00.662 [ACK #5] disposicion 'accepted' del Hub en 103 ms
+04:45:00.662 [AMQP] cerrando conexion: completados 5 mensajes
+[0x5ad3d30f95b0]: AMQP:FRAME:0 -> @detach(22) [handle=0x2, closed=true]
+[0x5ad3d30f95b0]: AMQP:FRAME:0 -> @detach(22) [handle=0x0, closed=true]
+[0x5ad3d30f95b0]: AMQP:FRAME:0 -> @detach(22) [handle=0x1, closed=true]
+[0x5ad3d30f95b0]: AMQP:FRAME:0 -> @close(24) []
+[0x5ad3d30f95b0]: AMQP:FRAME:0 <- @detach(22) [handle=0x2, closed=true]
+[0x5ad3d30f95b0]: AMQP:FRAME:0 <- @detach(22) [handle=0x0, closed=true]
+[0x5ad3d30f95b0]: AMQP:FRAME:0 <- @detach(22) [handle=0x1, closed=true]
+[0x5ad3d30f95b0]: AMQP:FRAME:0 <- @close(24) []
+[0x5ad3d30f95b0]:   IO:FRAME:  <- EOS
+[0x5ad3d30f95b0]:   IO:FRAME:  -> EOS
+04:45:00.673 ---- RESUMEN [amqp] ----
+04:45:00.673 [MED] conexion: tcp+tls+sasl+open               141 ms
+04:45:00.673 [MED] conexion: cbs_put_token                    11 ms
+04:45:00.673 [MED] conexion: listo_para_enviar               162 ms
+04:45:00.673 [MED] mensajes confirmados=5  payload_bytes prom=53.0
+04:45:00.673 [MED] latencia envio->ack ms: min=101 p50=103 p95=163 max=178 prom=117
+04:45:00.673 [MED] espera generacion->ack ms: p50=248 max=352

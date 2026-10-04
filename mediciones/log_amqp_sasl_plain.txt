@@ -1,0 +1,21 @@
+05:31:49.453 [DPS] HTTPS PUT https://global.azure-devices-provisioning.net/0ne00FE0A30/registrations/amqp-lab4/register  (SAS sr=0ne00FE0A30/registrations/amqp-lab4)
+05:31:51.629 [DPS] HTTPS GET operations -> 200 status=assigned
+05:31:51.629 [DPS] asignado -> iotc-5ce70e27-5a44-4297-8294-5533402ae4d9.azure-devices.net
+05:31:51.630 [SAS] token generado a mano (SASL PLAIN, sr=iotc-5ce70e27-5a44-4297-8294-5533402ae4d9.azure-devices.net/devices/amqp-lab4, ttl=3600s)
+05:31:51.630 [AMQP] Conectando a amqps://iotc-5ce70e27-5a44-4297-8294-5533402ae4d9.azure-devices.net:5671  (TLS verificado, SASL PLAIN)
+05:31:51.776 [AMQP] OPEN del Hub recibido: conexion lista en 146 ms (TCP+TLS+SASL+Open)
+05:31:51.776 [AMQP] ATTACH enlace de telemetria -> /devices/amqp-lab4/messages/events
+05:31:51.790 [AMQP] enlace de telemetria abierto (credito inicial=50)
+05:31:51.791 [TX #1] transfer bytes=53 credito_restante=49 payload={"temperature":28.6,"humedad":47.7,"illuminance":538}
+05:31:51.973 [ACK #1] disposicion 'accepted' del Hub en 182 ms
+05:31:52.679 [TX #2] transfer bytes=53 credito_restante=48 payload={"temperature":20.7,"humedad":61.6,"illuminance":283}
+05:31:52.789 [ACK #2] disposicion 'accepted' del Hub en 110 ms
+05:31:53.632 [TX #3] transfer bytes=53 credito_restante=47 payload={"temperature":30.6,"humedad":56.8,"illuminance":151}
+05:31:53.734 [ACK #3] disposicion 'accepted' del Hub en 102 ms
+05:31:53.734 [AMQP] cerrando conexion: completados 3 mensajes
+05:31:53.752 ---- RESUMEN [amqp-plain] ----
+05:31:53.752 [MED] conexion: tcp+tls+sasl+open               146 ms
+05:31:53.752 [MED] conexion: listo_para_enviar               160 ms
+05:31:53.752 [MED] mensajes confirmados=3  payload_bytes prom=53.0
+05:31:53.752 [MED] latencia envio->ack ms: min=102 p50=110 p95=175 max=182 prom=131
+05:31:53.752 [MED] espera generacion->ack ms: p50=158 max=343

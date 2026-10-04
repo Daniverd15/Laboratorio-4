@@ -1,0 +1,16 @@
+04:42:56.976 [DPS] HTTPS PUT https://global.azure-devices-provisioning.net/0ne00FE0A30/registrations/https-lab4/register  (SAS sr=0ne00FE0A30/registrations/https-lab4)
+04:42:59.129 [DPS] HTTPS GET operations -> 200 status=assigned
+04:42:59.129 [DPS] asignado -> iotc-5ce70e27-5a44-4297-8294-5533402ae4d9.azure-devices.net
+04:42:59.129 [SAS] token generado a mano sr=iotc-5ce70e27-5a44-4297-8294-5533402ae4d9.azure-devices.net/devices/https-lab4 ttl=3600s
+04:42:59.129 [HTTPS] POST https://iotc-5ce70e27-5a44-4297-8294-5533402ae4d9.azure-devices.net/devices/https-lab4/messages/events?api-version=2021-04-12  keep-alive=True
+04:42:59.211 [HTTPS] TCP+TLS establecido en 81 ms (TLSv1.2, ECDHE-RSA-AES128-GCM-SHA256)
+04:42:59.419 [TX #1] POST bytes=53 -> HTTP 204 en 208 ms (+81 ms TLS)  payload={"temperature":22.5,"humedad":65.9,"illuminance":652}
+04:43:01.281 [TX #2] POST bytes=53 -> HTTP 204 en 108 ms  payload={"temperature":28.3,"humedad":50.9,"illuminance":317}
+04:43:03.236 [TX #3] POST bytes=53 -> HTTP 204 en 100 ms  payload={"temperature":26.3,"humedad":59.4,"illuminance":194}
+04:43:05.243 [TX #4] POST bytes=53 -> HTTP 204 en 102 ms  payload={"temperature":24.1,"humedad":60.8,"illuminance":363}
+04:43:07.246 [TX #5] POST bytes=53 -> HTTP 204 en 99 ms  payload={"temperature":29.4,"humedad":43.9,"illuminance":684}
+04:43:07.247 ---- RESUMEN [https-ka] ----
+04:43:07.247 [MED] conexion: tcp_tls                          81 ms
+04:43:07.247 [MED] mensajes confirmados=5  payload_bytes prom=53.0
+04:43:07.247 [MED] latencia envio->ack ms: min=99 p50=102 p95=253 max=289 prom=140
+04:43:07.247 [MED] espera generacion->ack ms: p50=108 max=289

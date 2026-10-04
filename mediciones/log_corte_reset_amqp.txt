@@ -1,0 +1,133 @@
+04:59:26.304 [DPS] omitido, IOTC_HUB=iotc-5ce70e27-5a44-4297-8294-5533402ae4d9.azure-devices.net
+04:59:26.306 [AMQP] Conectando a amqps://iotc-5ce70e27-5a44-4297-8294-5533402ae4d9.azure-devices.net:5671  (TLS verificado, SASL ANONYMOUS + CBS)
+04:59:26.389 [AMQP] OPEN del Hub recibido: conexion lista en 84 ms (TCP+TLS+SASL+Open)
+04:59:26.389 [CBS] Enlaces abiertos hacia el nodo '$cbs' (sender + receiver)
+04:59:26.399 [SAS] token generado a mano (sr=iotc-5ce70e27-5a44-4297-8294-5533402ae4d9.azure-devices.net/devices/amqp-lab4, ttl=3600s) -> put-token enviado al nodo $cbs
+04:59:26.409 [CBS] respuesta put-token: status-code=200 (OK) en 10 ms
+04:59:26.409 [AMQP] ATTACH enlace de telemetria -> /devices/amqp-lab4/messages/events
+04:59:26.419 [AMQP] enlace de telemetria abierto (credito inicial=50)
+04:59:26.420 [TX #1] transfer bytes=53 credito_restante=49 payload={"temperature":26.9,"humedad":48.8,"illuminance":569}
+04:59:26.551 [ACK #1] disposicion 'accepted' del Hub en 131 ms
+04:59:27.342 [TX #2] transfer bytes=53 credito_restante=48 payload={"temperature":29.5,"humedad":42.8,"illuminance":211}
+04:59:27.450 [ACK #2] disposicion 'accepted' del Hub en 107 ms
+04:59:28.345 [TX #3] transfer bytes=53 credito_restante=47 payload={"temperature":23.8,"humedad":68.2,"illuminance":576}
+04:59:28.443 [ACK #3] disposicion 'accepted' del Hub en 98 ms
+04:59:29.349 [TX #4] transfer bytes=53 credito_restante=46 payload={"temperature":24.3,"humedad":57.5,"illuminance":743}
+04:59:29.456 [ACK #4] disposicion 'accepted' del Hub en 108 ms
+04:59:30.352 [TX #5] transfer bytes=53 credito_restante=45 payload={"temperature":27.2,"humedad":44.5,"illuminance":538}
+04:59:30.450 [ACK #5] disposicion 'accepted' del Hub en 98 ms
+04:59:31.355 [TX #6] transfer bytes=53 credito_restante=44 payload={"temperature":29.5,"humedad":64.3,"illuminance":646}
+04:59:31.460 [ACK #6] disposicion 'accepted' del Hub en 105 ms
+04:59:32.358 [TX #7] transfer bytes=53 credito_restante=43 payload={"temperature":23.2,"humedad":66.0,"illuminance":376}
+04:59:32.455 [ACK #7] disposicion 'accepted' del Hub en 97 ms
+04:59:33.361 [TX #8] transfer bytes=53 credito_restante=42 payload={"temperature":24.1,"humedad":48.0,"illuminance":532}
+04:59:33.470 [ACK #8] disposicion 'accepted' del Hub en 109 ms
+04:59:34.314 [TX #9] transfer bytes=53 credito_restante=41 payload={"temperature":28.6,"humedad":47.8,"illuminance":493}
+04:59:34.414 [ACK #9] disposicion 'accepted' del Hub en 99 ms
+04:59:35.318 [TX #10] transfer bytes=53 credito_restante=40 payload={"temperature":31.9,"humedad":49.0,"illuminance":673}
+04:59:35.410 [ACK #10] disposicion 'accepted' del Hub en 93 ms
+04:59:36.239 [CORTE] === BLOQUEANDO puerto 5671 (REJECT --reject-with tcp-reset) durante 16s ===
+04:59:36.321 [TX #11] transfer bytes=53 credito_restante=39 payload={"temperature":31.9,"humedad":60.6,"illuminance":466}
+04:59:36.321 [AMQP] conexion perdida (socket cerrado)
+04:59:36.322 [AMQP] reintentando en 1s (quedan 1 lecturas sin confirmar en cola)
+04:59:37.324 [AMQP] Conectando a amqps://iotc-5ce70e27-5a44-4297-8294-5533402ae4d9.azure-devices.net:5671  (TLS verificado, SASL ANONYMOUS + CBS)
+04:59:37.353 [AMQP] conexion perdida (socket cerrado)
+04:59:37.353 [AMQP] reintentando en 2s (quedan 2 lecturas sin confirmar en cola)
+04:59:39.356 [AMQP] Conectando a amqps://iotc-5ce70e27-5a44-4297-8294-5533402ae4d9.azure-devices.net:5671  (TLS verificado, SASL ANONYMOUS + CBS)
+04:59:39.383 [AMQP] conexion perdida (socket cerrado)
+04:59:39.383 [AMQP] reintentando en 2s (quedan 4 lecturas sin confirmar en cola)
+04:59:41.386 [AMQP] Conectando a amqps://iotc-5ce70e27-5a44-4297-8294-5533402ae4d9.azure-devices.net:5671  (TLS verificado, SASL ANONYMOUS + CBS)
+04:59:41.411 [AMQP] conexion perdida (socket cerrado)
+04:59:41.411 [AMQP] reintentando en 2s (quedan 6 lecturas sin confirmar en cola)
+04:59:43.414 [AMQP] Conectando a amqps://iotc-5ce70e27-5a44-4297-8294-5533402ae4d9.azure-devices.net:5671  (TLS verificado, SASL ANONYMOUS + CBS)
+04:59:43.442 [AMQP] conexion perdida (socket cerrado)
+04:59:43.443 [AMQP] reintentando en 2s (quedan 8 lecturas sin confirmar en cola)
+04:59:45.446 [AMQP] Conectando a amqps://iotc-5ce70e27-5a44-4297-8294-5533402ae4d9.azure-devices.net:5671  (TLS verificado, SASL ANONYMOUS + CBS)
+04:59:45.489 [AMQP] conexion perdida (socket cerrado)
+04:59:45.489 [AMQP] reintentando en 2s (quedan 10 lecturas sin confirmar en cola)
+04:59:47.492 [AMQP] Conectando a amqps://iotc-5ce70e27-5a44-4297-8294-5533402ae4d9.azure-devices.net:5671  (TLS verificado, SASL ANONYMOUS + CBS)
+04:59:47.520 [AMQP] conexion perdida (socket cerrado)
+04:59:47.520 [AMQP] reintentando en 2s (quedan 12 lecturas sin confirmar en cola)
+04:59:49.523 [AMQP] Conectando a amqps://iotc-5ce70e27-5a44-4297-8294-5533402ae4d9.azure-devices.net:5671  (TLS verificado, SASL ANONYMOUS + CBS)
+04:59:49.553 [AMQP] conexion perdida (socket cerrado)
+04:59:49.553 [AMQP] reintentando en 2s (quedan 14 lecturas sin confirmar en cola)
+04:59:51.556 [AMQP] Conectando a amqps://iotc-5ce70e27-5a44-4297-8294-5533402ae4d9.azure-devices.net:5671  (TLS verificado, SASL ANONYMOUS + CBS)
+04:59:51.582 [AMQP] conexion perdida (socket cerrado)
+04:59:51.582 [AMQP] reintentando en 2s (quedan 16 lecturas sin confirmar en cola)
+04:59:52.272 [CORTE] === PUERTO LIBERADO ===
+04:59:53.585 [AMQP] Conectando a amqps://iotc-5ce70e27-5a44-4297-8294-5533402ae4d9.azure-devices.net:5671  (TLS verificado, SASL ANONYMOUS + CBS)
+04:59:53.662 [AMQP] OPEN del Hub recibido: conexion lista en 78 ms (TCP+TLS+SASL+Open)
+04:59:53.663 [CBS] Enlaces abiertos hacia el nodo '$cbs' (sender + receiver)
+04:59:53.672 [SAS] token generado a mano (sr=iotc-5ce70e27-5a44-4297-8294-5533402ae4d9.azure-devices.net/devices/amqp-lab4, ttl=3600s) -> put-token enviado al nodo $cbs
+04:59:53.681 [CBS] respuesta put-token: status-code=200 (OK) en 9 ms
+04:59:53.681 [AMQP] ATTACH enlace de telemetria -> /devices/amqp-lab4/messages/events
+04:59:53.693 [AMQP] enlace de telemetria abierto (credito inicial=50)
+04:59:53.693 [TX #11] transfer bytes=53 credito_restante=49 payload={"temperature":31.9,"humedad":60.6,"illuminance":466}
+04:59:53.693 [TX #12] transfer bytes=53 credito_restante=48 payload={"temperature":22.4,"humedad":46.8,"illuminance":324}
+04:59:53.693 [TX #13] transfer bytes=53 credito_restante=47 payload={"temperature":20.7,"humedad":49.8,"illuminance":467}
+04:59:53.693 [TX #14] transfer bytes=53 credito_restante=46 payload={"temperature":31.3,"humedad":58.1,"illuminance":715}
+04:59:53.693 [TX #15] transfer bytes=53 credito_restante=45 payload={"temperature":30.5,"humedad":45.5,"illuminance":309}
+04:59:53.694 [TX #16] transfer bytes=53 credito_restante=44 payload={"temperature":25.8,"humedad":43.5,"illuminance":726}
+04:59:53.694 [TX #17] transfer bytes=53 credito_restante=43 payload={"temperature":20.3,"humedad":64.4,"illuminance":678}
+04:59:53.694 [TX #18] transfer bytes=53 credito_restante=42 payload={"temperature":23.3,"humedad":53.7,"illuminance":228}
+04:59:53.694 [TX #19] transfer bytes=53 credito_restante=41 payload={"temperature":27.4,"humedad":62.4,"illuminance":205}
+04:59:53.694 [TX #20] transfer bytes=53 credito_restante=40 payload={"temperature":21.1,"humedad":63.1,"illuminance":550}
+04:59:53.694 [TX #21] transfer bytes=53 credito_restante=39 payload={"temperature":21.9,"humedad":54.0,"illuminance":501}
+04:59:53.694 [TX #22] transfer bytes=53 credito_restante=38 payload={"temperature":27.0,"humedad":53.1,"illuminance":238}
+04:59:53.694 [TX #23] transfer bytes=53 credito_restante=37 payload={"temperature":25.6,"humedad":68.6,"illuminance":283}
+04:59:53.694 [TX #24] transfer bytes=53 credito_restante=36 payload={"temperature":20.1,"humedad":65.7,"illuminance":587}
+04:59:53.694 [TX #25] transfer bytes=53 credito_restante=35 payload={"temperature":29.7,"humedad":49.5,"illuminance":256}
+04:59:53.694 [TX #26] transfer bytes=53 credito_restante=34 payload={"temperature":25.0,"humedad":45.0,"illuminance":721}
+04:59:53.694 [TX #27] transfer bytes=53 credito_restante=33 payload={"temperature":22.5,"humedad":66.0,"illuminance":550}
+04:59:53.695 [TX #28] transfer bytes=53 credito_restante=32 payload={"temperature":21.7,"humedad":56.1,"illuminance":454}
+04:59:53.862 [ACK #11] disposicion 'accepted' del Hub en 169 ms  (espera total 17547 ms)
+04:59:53.954 [ACK #12] disposicion 'accepted' del Hub en 261 ms  (espera total 16638 ms)
+04:59:53.955 [ACK #13] disposicion 'accepted' del Hub en 261 ms  (espera total 15637 ms)
+04:59:53.955 [ACK #14] disposicion 'accepted' del Hub en 261 ms  (espera total 14636 ms)
+04:59:53.955 [ACK #15] disposicion 'accepted' del Hub en 261 ms  (espera total 13635 ms)
+04:59:53.955 [ACK #16] disposicion 'accepted' del Hub en 261 ms  (espera total 12633 ms)
+04:59:53.955 [ACK #17] disposicion 'accepted' del Hub en 261 ms  (espera total 11632 ms)
+04:59:53.955 [ACK #18] disposicion 'accepted' del Hub en 261 ms  (espera total 10631 ms)
+04:59:53.955 [ACK #19] disposicion 'accepted' del Hub en 261 ms  (espera total 9630 ms)
+04:59:53.955 [ACK #20] disposicion 'accepted' del Hub en 261 ms  (espera total 8629 ms)
+04:59:53.955 [ACK #21] disposicion 'accepted' del Hub en 261 ms  (espera total 7628 ms)
+04:59:53.955 [ACK #22] disposicion 'accepted' del Hub en 261 ms  (espera total 6627 ms)
+04:59:53.955 [ACK #23] disposicion 'accepted' del Hub en 261 ms  (espera total 5626 ms)
+04:59:53.955 [ACK #24] disposicion 'accepted' del Hub en 261 ms  (espera total 4625 ms)
+04:59:53.955 [ACK #25] disposicion 'accepted' del Hub en 261 ms  (espera total 3624 ms)
+04:59:53.956 [ACK #26] disposicion 'accepted' del Hub en 261 ms  (espera total 2622 ms)
+04:59:53.956 [ACK #27] disposicion 'accepted' del Hub en 261 ms  (espera total 1621 ms)
+04:59:53.956 [ACK #28] disposicion 'accepted' del Hub en 261 ms
+04:59:54.365 [TX #29] transfer bytes=53 credito_restante=31 payload={"temperature":21.5,"humedad":47.5,"illuminance":204}
+04:59:54.464 [ACK #29] disposicion 'accepted' del Hub en 99 ms
+04:59:55.368 [TX #30] transfer bytes=53 credito_restante=30 payload={"temperature":24.6,"humedad":57.1,"illuminance":483}
+04:59:55.464 [ACK #30] disposicion 'accepted' del Hub en 97 ms
+04:59:56.371 [TX #31] transfer bytes=53 credito_restante=29 payload={"temperature":25.7,"humedad":61.2,"illuminance":158}
+04:59:56.477 [ACK #31] disposicion 'accepted' del Hub en 106 ms
+04:59:57.374 [TX #32] transfer bytes=53 credito_restante=28 payload={"temperature":29.9,"humedad":63.8,"illuminance":719}
+04:59:57.481 [ACK #32] disposicion 'accepted' del Hub en 106 ms
+04:59:58.377 [TX #33] transfer bytes=53 credito_restante=27 payload={"temperature":28.1,"humedad":51.4,"illuminance":744}
+04:59:58.478 [ACK #33] disposicion 'accepted' del Hub en 101 ms
+04:59:59.381 [TX #34] transfer bytes=53 credito_restante=26 payload={"temperature":27.8,"humedad":59.3,"illuminance":279}
+04:59:59.477 [ACK #34] disposicion 'accepted' del Hub en 97 ms
+05:00:00.384 [TX #35] transfer bytes=53 credito_restante=25 payload={"temperature":24.4,"humedad":51.3,"illuminance":216}
+05:00:00.494 [ACK #35] disposicion 'accepted' del Hub en 110 ms
+05:00:01.387 [TX #36] transfer bytes=53 credito_restante=24 payload={"temperature":28.6,"humedad":57.4,"illuminance":309}
+05:00:01.476 [ACK #36] disposicion 'accepted' del Hub en 89 ms
+05:00:02.390 [TX #37] transfer bytes=53 credito_restante=23 payload={"temperature":24.2,"humedad":64.3,"illuminance":583}
+05:00:02.490 [ACK #37] disposicion 'accepted' del Hub en 99 ms
+05:00:03.393 [TX #38] transfer bytes=53 credito_restante=22 payload={"temperature":29.3,"humedad":59.7,"illuminance":451}
+05:00:03.493 [ACK #38] disposicion 'accepted' del Hub en 100 ms
+05:00:04.398 [TX #39] transfer bytes=53 credito_restante=21 payload={"temperature":23.3,"humedad":60.8,"illuminance":598}
+05:00:04.499 [ACK #39] disposicion 'accepted' del Hub en 102 ms
+05:00:05.351 [TX #40] transfer bytes=53 credito_restante=20 payload={"temperature":20.0,"humedad":52.7,"illuminance":264}
+05:00:05.454 [ACK #40] disposicion 'accepted' del Hub en 103 ms
+05:00:05.454 [AMQP] cerrando conexion: completados 40 mensajes
+05:00:05.467 ---- RESUMEN [amqp] ----
+05:00:05.467 [MED] conexion: tcp+tls+sasl+open                78 ms
+05:00:05.467 [MED] conexion: cbs_put_token                     9 ms
+05:00:05.467 [MED] conexion: listo_para_enviar                96 ms
+05:00:05.467 [MED] mensajes confirmados=40  payload_bytes prom=53.0
+05:00:05.467 [MED] latencia envio->ack ms: min=89 p50=109 p95=261 max=261 prom=172
+05:00:05.467 [MED] espera generacion->ack ms: p50=155 max=17547
+05:00:05.467 [MED] CSV escrito en /home/azureuser/lab4/mediciones/corte_reset_amqp.csv

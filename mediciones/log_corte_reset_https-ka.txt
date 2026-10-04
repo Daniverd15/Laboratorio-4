@@ -1,0 +1,62 @@
+05:00:05.534 [DPS] omitido, IOTC_HUB=iotc-5ce70e27-5a44-4297-8294-5533402ae4d9.azure-devices.net
+05:00:05.534 [SAS] token generado a mano sr=iotc-5ce70e27-5a44-4297-8294-5533402ae4d9.azure-devices.net/devices/https-lab4 ttl=3600s
+05:00:05.534 [HTTPS] POST https://iotc-5ce70e27-5a44-4297-8294-5533402ae4d9.azure-devices.net/devices/https-lab4/messages/events?api-version=2021-04-12  keep-alive=True
+05:00:05.619 [HTTPS] TCP+TLS establecido en 84 ms (TLSv1.2, ECDHE-RSA-AES128-GCM-SHA256)
+05:00:05.789 [TX #1] POST bytes=53 -> HTTP 204 en 169 ms (+84 ms TLS)  payload={"temperature":25.2,"humedad":49.8,"illuminance":645}
+05:00:06.641 [TX #2] POST bytes=53 -> HTTP 204 en 101 ms  payload={"temperature":26.0,"humedad":43.3,"illuminance":564}
+05:00:07.651 [TX #3] POST bytes=53 -> HTTP 204 en 108 ms  payload={"temperature":27.1,"humedad":66.8,"illuminance":425}
+05:00:08.663 [TX #4] POST bytes=53 -> HTTP 204 en 109 ms  payload={"temperature":27.4,"humedad":51.3,"illuminance":463}
+05:00:09.676 [TX #5] POST bytes=53 -> HTTP 204 en 111 ms  payload={"temperature":25.5,"humedad":60.5,"illuminance":478}
+05:00:10.686 [TX #6] POST bytes=53 -> HTTP 204 en 108 ms  payload={"temperature":28.0,"humedad":58.0,"illuminance":259}
+05:00:11.695 [TX #7] POST bytes=53 -> HTTP 204 en 107 ms  payload={"temperature":27.2,"humedad":44.9,"illuminance":534}
+05:00:12.658 [TX #8] POST bytes=53 -> HTTP 204 en 110 ms  payload={"temperature":21.1,"humedad":57.1,"illuminance":553}
+05:00:13.669 [TX #9] POST bytes=53 -> HTTP 204 en 109 ms  payload={"temperature":24.0,"humedad":42.4,"illuminance":348}
+05:00:14.679 [TX #10] POST bytes=53 -> HTTP 204 en 109 ms  payload={"temperature":26.0,"humedad":55.4,"illuminance":375}
+05:00:15.494 [CORTE] === BLOQUEANDO puerto 443 (REJECT --reject-with tcp-reset) durante 16s ===
+05:00:15.582 [ERROR] SSLEOFError: EOF occurred in violation of protocol (_ssl.c:2437) -> reintento en 1s (mensaje #11 queda en cola)
+05:00:16.587 [ERROR] ConnectionRefusedError: [Errno 111] Connection refused -> reintento en 2s (mensaje #11 queda en cola)
+05:00:18.591 [ERROR] ConnectionRefusedError: [Errno 111] Connection refused -> reintento en 2s (mensaje #11 queda en cola)
+05:00:20.598 [ERROR] ConnectionRefusedError: [Errno 111] Connection refused -> reintento en 2s (mensaje #11 queda en cola)
+05:00:22.602 [ERROR] ConnectionRefusedError: [Errno 111] Connection refused -> reintento en 2s (mensaje #11 queda en cola)
+05:00:24.608 [ERROR] ConnectionRefusedError: [Errno 111] Connection refused -> reintento en 2s (mensaje #11 queda en cola)
+05:00:26.614 [ERROR] ConnectionRefusedError: [Errno 111] Connection refused -> reintento en 2s (mensaje #11 queda en cola)
+05:00:28.619 [ERROR] ConnectionRefusedError: [Errno 111] Connection refused -> reintento en 2s (mensaje #11 queda en cola)
+05:00:30.623 [ERROR] ConnectionRefusedError: [Errno 111] Connection refused -> reintento en 2s (mensaje #11 queda en cola)
+05:00:31.527 [CORTE] === PUERTO LIBERADO ===
+05:00:32.658 [HTTPS] TCP+TLS establecido en 32 ms (TLSv1.2, ECDHE-RSA-AES128-GCM-SHA256)
+05:00:32.831 [TX #11] POST bytes=53 -> HTTP 204 en 173 ms (+32 ms TLS)  payload={"temperature":28.5,"humedad":64.5,"illuminance":320}
+05:00:32.926 [TX #12] POST bytes=53 -> HTTP 204 en 96 ms  payload={"temperature":25.2,"humedad":69.9,"illuminance":421}
+05:00:33.023 [TX #13] POST bytes=53 -> HTTP 204 en 96 ms  payload={"temperature":31.7,"humedad":60.9,"illuminance":529}
+05:00:33.121 [TX #14] POST bytes=53 -> HTTP 204 en 98 ms  payload={"temperature":25.2,"humedad":48.3,"illuminance":568}
+05:00:33.231 [TX #15] POST bytes=53 -> HTTP 204 en 110 ms  payload={"temperature":23.4,"humedad":64.0,"illuminance":384}
+05:00:33.327 [TX #16] POST bytes=53 -> HTTP 204 en 96 ms  payload={"temperature":27.5,"humedad":57.0,"illuminance":253}
+05:00:33.424 [TX #17] POST bytes=53 -> HTTP 204 en 97 ms  payload={"temperature":24.7,"humedad":48.1,"illuminance":516}
+05:00:33.521 [TX #18] POST bytes=53 -> HTTP 204 en 97 ms  payload={"temperature":23.0,"humedad":54.1,"illuminance":233}
+05:00:33.632 [TX #19] POST bytes=53 -> HTTP 204 en 111 ms  payload={"temperature":26.9,"humedad":63.3,"illuminance":659}
+05:00:33.728 [TX #20] POST bytes=53 -> HTTP 204 en 96 ms  payload={"temperature":30.9,"humedad":50.6,"illuminance":652}
+05:00:33.841 [TX #21] POST bytes=53 -> HTTP 204 en 112 ms  payload={"temperature":26.5,"humedad":62.7,"illuminance":750}
+05:00:33.937 [TX #22] POST bytes=53 -> HTTP 204 en 96 ms  payload={"temperature":24.3,"humedad":41.5,"illuminance":466}
+05:00:34.035 [TX #23] POST bytes=53 -> HTTP 204 en 98 ms  payload={"temperature":20.2,"humedad":58.7,"illuminance":687}
+05:00:34.129 [TX #24] POST bytes=53 -> HTTP 204 en 94 ms  payload={"temperature":24.9,"humedad":51.1,"illuminance":235}
+05:00:34.228 [TX #25] POST bytes=53 -> HTTP 204 en 99 ms  payload={"temperature":21.4,"humedad":42.9,"illuminance":439}
+05:00:34.324 [TX #26] POST bytes=53 -> HTTP 204 en 95 ms  payload={"temperature":24.1,"humedad":48.2,"illuminance":152}
+05:00:34.435 [TX #27] POST bytes=53 -> HTTP 204 en 111 ms  payload={"temperature":28.5,"humedad":58.2,"illuminance":294}
+05:00:34.532 [TX #28] POST bytes=53 -> HTTP 204 en 98 ms  payload={"temperature":25.2,"humedad":53.2,"illuminance":525}
+05:00:34.628 [TX #29] POST bytes=53 -> HTTP 204 en 95 ms  payload={"temperature":25.1,"humedad":41.9,"illuminance":557}
+05:00:34.726 [TX #30] POST bytes=53 -> HTTP 204 en 99 ms  payload={"temperature":21.3,"humedad":55.5,"illuminance":382}
+05:00:35.685 [TX #31] POST bytes=53 -> HTTP 204 en 106 ms  payload={"temperature":25.6,"humedad":57.4,"illuminance":660}
+05:00:36.696 [TX #32] POST bytes=53 -> HTTP 204 en 109 ms  payload={"temperature":20.8,"humedad":40.5,"illuminance":567}
+05:00:37.706 [TX #33] POST bytes=53 -> HTTP 204 en 108 ms  payload={"temperature":28.6,"humedad":47.1,"illuminance":646}
+05:00:38.720 [TX #34] POST bytes=53 -> HTTP 204 en 111 ms  payload={"temperature":23.5,"humedad":43.4,"illuminance":314}
+05:00:39.730 [TX #35] POST bytes=53 -> HTTP 204 en 108 ms  payload={"temperature":24.4,"humedad":42.1,"illuminance":591}
+05:00:40.692 [TX #36] POST bytes=53 -> HTTP 204 en 110 ms  payload={"temperature":26.3,"humedad":57.5,"illuminance":616}
+05:00:41.702 [TX #37] POST bytes=53 -> HTTP 204 en 108 ms  payload={"temperature":21.7,"humedad":56.1,"illuminance":342}
+05:00:42.714 [TX #38] POST bytes=53 -> HTTP 204 en 109 ms  payload={"temperature":21.3,"humedad":44.8,"illuminance":628}
+05:00:43.724 [TX #39] POST bytes=53 -> HTTP 204 en 108 ms  payload={"temperature":25.3,"humedad":44.7,"illuminance":356}
+05:00:44.734 [TX #40] POST bytes=53 -> HTTP 204 en 108 ms  payload={"temperature":26.9,"humedad":57.8,"illuminance":425}
+05:00:44.735 ---- RESUMEN [https-ka] ----
+05:00:44.735 [MED] conexion: tcp_tls                          84 ms
+05:00:44.735 [MED] mensajes confirmados=40  payload_bytes prom=53.0
+05:00:44.735 [MED] latencia envio->ack ms: min=94 p50=108 p95=117 max=253 prom=110
+05:00:44.735 [MED] espera generacion->ack ms: p50=205 max=17284
+05:00:44.735 [MED] CSV escrito en /home/azureuser/lab4/mediciones/corte_reset_https-ka.csv

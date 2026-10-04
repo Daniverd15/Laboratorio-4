@@ -1,0 +1,15 @@
+04:45:23.494 [DPS] omitido, IOTC_HUB=iotc-5ce70e27-5a44-4297-8294-5533402ae4d9.azure-devices.net
+04:45:23.494 [SAS] token generado a mano sr=iotc-5ce70e27-5a44-4297-8294-5533402ae4d9.azure-devices.net/devices/mqtt-lab4 ttl=3600s
+04:45:23.494 [MQTT] Conectando a iotc-5ce70e27-5a44-4297-8294-5533402ae4d9.azure-devices.net:8883 (MQTT sobre TCP, TLS verificado, QoS=1)
+04:45:23.540 [MQTT] CONNACK rc=0 (conectado)
+04:45:23.540 [MQTT] Suscrito a metodos directos: $iothub/methods/POST/#
+04:45:23.630 [TX #1] PUBLISH topic=devices/mqtt-lab4/messages/events/ qos=1 bytes=53 payload={"temperature":20.8,"humedad":69.9,"illuminance":448}
+04:45:23.734 [ACK #1] PUBACK en 104 ms (qos=1)
+04:45:24.735 [MQTT] DESCONECTADO (rc=0). paho reintenta con backoff...
+04:45:24.735 [SAS] token nuevo generado para la reconexion (MQTT no puede renovarlo en caliente)
+04:45:24.736 ---- RESUMEN [mqtt-qos1] ----
+04:45:24.736 [MED] conexion: tcp+tls+connect(connack)         45 ms
+04:45:24.736 [MED] mensajes confirmados=1  payload_bytes prom=53.0
+04:45:24.736 [MED] latencia envio->ack ms: min=104 p50=104 p95=104 max=104 prom=104
+04:45:24.736 [MED] espera generacion->ack ms: p50=104 max=104
+04:45:24.736 [MED] CSV escrito en /home/azureuser/lab4/mediciones/mqtt-qos1_n1.csv

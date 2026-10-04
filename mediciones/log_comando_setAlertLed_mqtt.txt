@@ -1,0 +1,6 @@
+$ curl -X POST https://<app>.azureiotcentral.com/api/devices/mqtt-lab4/commands/setAlertLed?api-version=2022-07-31 -d {"request":true}
+{"request":true,"response":{"result":"LED ON"},"responseCode":200}
+
+$ journalctl -u lab4-mqtt   (en la VM, cliente MQTT)
+05:30:13.659 [C2D] Metodo directo 'setAlertLed' rid=1 payload=true
+05:30:36.840 [C2D] Metodo directo 'setAlertLed' rid=2 payload=true

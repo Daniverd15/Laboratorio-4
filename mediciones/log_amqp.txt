@@ -1,0 +1,28 @@
+04:45:00.767 [DPS] HTTPS PUT https://global.azure-devices-provisioning.net/0ne00FE0A30/registrations/amqp-lab4/register  (SAS sr=0ne00FE0A30/registrations/amqp-lab4)
+04:45:02.917 [DPS] HTTPS GET operations -> 200 status=assigned
+04:45:02.917 [DPS] asignado -> iotc-5ce70e27-5a44-4297-8294-5533402ae4d9.azure-devices.net
+04:45:02.918 [AMQP] Conectando a amqps://iotc-5ce70e27-5a44-4297-8294-5533402ae4d9.azure-devices.net:5671  (TLS verificado, SASL ANONYMOUS + CBS)
+04:45:03.041 [AMQP] OPEN del Hub recibido: conexion lista en 123 ms (TCP+TLS+SASL+Open)
+04:45:03.041 [CBS] Enlaces abiertos hacia el nodo '$cbs' (sender + receiver)
+04:45:03.051 [SAS] token generado a mano (sr=iotc-5ce70e27-5a44-4297-8294-5533402ae4d9.azure-devices.net/devices/amqp-lab4, ttl=3600s) -> put-token enviado al nodo $cbs
+04:45:03.063 [CBS] respuesta put-token: status-code=200 (OK) en 12 ms
+04:45:03.063 [AMQP] ATTACH enlace de telemetria -> /devices/amqp-lab4/messages/events
+04:45:03.073 [AMQP] enlace de telemetria abierto (credito inicial=50)
+04:45:03.074 [TX #1] transfer bytes=53 credito_restante=49 payload={"temperature":29.4,"humedad":49.5,"illuminance":196}
+04:45:03.308 [ACK #1] disposicion 'accepted' del Hub en 234 ms
+04:45:05.044 [TX #2] transfer bytes=53 credito_restante=48 payload={"temperature":27.2,"humedad":47.5,"illuminance":248}
+04:45:05.155 [ACK #2] disposicion 'accepted' del Hub en 110 ms
+04:45:07.047 [TX #3] transfer bytes=53 credito_restante=47 payload={"temperature":20.5,"humedad":59.4,"illuminance":750}
+04:45:07.143 [ACK #3] disposicion 'accepted' del Hub en 96 ms
+04:45:09.050 [TX #4] transfer bytes=53 credito_restante=46 payload={"temperature":29.5,"humedad":69.5,"illuminance":282}
+04:45:09.149 [ACK #4] disposicion 'accepted' del Hub en 98 ms
+04:45:11.054 [TX #5] transfer bytes=53 credito_restante=45 payload={"temperature":30.3,"humedad":49.9,"illuminance":698}
+04:45:11.153 [ACK #5] disposicion 'accepted' del Hub en 99 ms
+04:45:11.153 [AMQP] cerrando conexion: completados 5 mensajes
+04:45:11.163 ---- RESUMEN [amqp] ----
+04:45:11.163 [MED] conexion: tcp+tls+sasl+open               123 ms
+04:45:11.163 [MED] conexion: cbs_put_token                    12 ms
+04:45:11.163 [MED] conexion: listo_para_enviar               145 ms
+04:45:11.163 [MED] mensajes confirmados=5  payload_bytes prom=53.0
+04:45:11.163 [MED] latencia envio->ack ms: min=96 p50=99 p95=210 max=234 prom=128
+04:45:11.163 [MED] espera generacion->ack ms: p50=227 max=391

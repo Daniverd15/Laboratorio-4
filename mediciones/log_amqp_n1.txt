@@ -1,0 +1,19 @@
+04:45:30.738 [DPS] omitido, IOTC_HUB=iotc-5ce70e27-5a44-4297-8294-5533402ae4d9.azure-devices.net
+04:45:30.740 [AMQP] Conectando a amqps://iotc-5ce70e27-5a44-4297-8294-5533402ae4d9.azure-devices.net:5671  (TLS verificado, SASL ANONYMOUS + CBS)
+04:45:30.820 [AMQP] OPEN del Hub recibido: conexion lista en 80 ms (TCP+TLS+SASL+Open)
+04:45:30.820 [CBS] Enlaces abiertos hacia el nodo '$cbs' (sender + receiver)
+04:45:30.830 [SAS] token generado a mano (sr=iotc-5ce70e27-5a44-4297-8294-5533402ae4d9.azure-devices.net/devices/amqp-lab4, ttl=3600s) -> put-token enviado al nodo $cbs
+04:45:30.840 [CBS] respuesta put-token: status-code=200 (OK) en 10 ms
+04:45:30.840 [AMQP] ATTACH enlace de telemetria -> /devices/amqp-lab4/messages/events
+04:45:30.851 [AMQP] enlace de telemetria abierto (credito inicial=50)
+04:45:30.851 [TX #1] transfer bytes=53 credito_restante=49 payload={"temperature":20.3,"humedad":67.4,"illuminance":373}
+04:45:31.057 [ACK #1] disposicion 'accepted' del Hub en 206 ms
+04:45:31.057 [AMQP] cerrando conexion: completados 1 mensajes
+04:45:31.068 ---- RESUMEN [amqp] ----
+04:45:31.068 [MED] conexion: tcp+tls+sasl+open                80 ms
+04:45:31.068 [MED] conexion: cbs_put_token                    10 ms
+04:45:31.068 [MED] conexion: listo_para_enviar               100 ms
+04:45:31.068 [MED] mensajes confirmados=1  payload_bytes prom=53.0
+04:45:31.068 [MED] latencia envio->ack ms: min=206 p50=206 p95=206 max=206 prom=206
+04:45:31.068 [MED] espera generacion->ack ms: p50=319 max=319
+04:45:31.068 [MED] CSV escrito en /home/azureuser/lab4/mediciones/amqp_n1.csv

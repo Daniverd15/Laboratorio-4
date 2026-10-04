@@ -1,0 +1,11 @@
+04:45:33.615 [DPS] omitido, IOTC_HUB=iotc-5ce70e27-5a44-4297-8294-5533402ae4d9.azure-devices.net
+04:45:33.616 [SAS] token generado a mano sr=iotc-5ce70e27-5a44-4297-8294-5533402ae4d9.azure-devices.net/devices/https-lab4 ttl=3600s
+04:45:33.616 [HTTPS] POST https://iotc-5ce70e27-5a44-4297-8294-5533402ae4d9.azure-devices.net/devices/https-lab4/messages/events?api-version=2021-04-12  keep-alive=False
+04:45:33.652 [HTTPS] TCP+TLS establecido en 35 ms (TLSv1.2, ECDHE-RSA-AES128-GCM-SHA256)
+04:45:33.806 [TX #1] POST bytes=53 -> HTTP 204 en 154 ms (+35 ms TLS)  payload={"temperature":31.5,"humedad":61.0,"illuminance":377}
+04:45:33.806 ---- RESUMEN [https-nokeepalive] ----
+04:45:33.806 [MED] conexion: tcp_tls                          35 ms
+04:45:33.806 [MED] mensajes confirmados=1  payload_bytes prom=53.0
+04:45:33.806 [MED] latencia envio->ack ms: min=189 p50=189 p95=189 max=189 prom=189
+04:45:33.806 [MED] espera generacion->ack ms: p50=189 max=189
+04:45:33.806 [MED] CSV escrito en /home/azureuser/lab4/mediciones/https-nk_n1.csv

@@ -1,0 +1,11 @@
+04:45:32.232 [DPS] omitido, IOTC_HUB=iotc-5ce70e27-5a44-4297-8294-5533402ae4d9.azure-devices.net
+04:45:32.232 [SAS] token generado a mano sr=iotc-5ce70e27-5a44-4297-8294-5533402ae4d9.azure-devices.net/devices/https-lab4 ttl=3600s
+04:45:32.232 [HTTPS] POST https://iotc-5ce70e27-5a44-4297-8294-5533402ae4d9.azure-devices.net/devices/https-lab4/messages/events?api-version=2021-04-12  keep-alive=True
+04:45:32.274 [HTTPS] TCP+TLS establecido en 41 ms (TLSv1.2, ECDHE-RSA-AES128-GCM-SHA256)
+04:45:32.449 [TX #1] POST bytes=53 -> HTTP 204 en 175 ms (+41 ms TLS)  payload={"temperature":23.4,"humedad":58.4,"illuminance":335}
+04:45:32.450 ---- RESUMEN [https-ka] ----
+04:45:32.450 [MED] conexion: tcp_tls                          41 ms
+04:45:32.450 [MED] mensajes confirmados=1  payload_bytes prom=53.0
+04:45:32.450 [MED] latencia envio->ack ms: min=216 p50=216 p95=216 max=216 prom=216
+04:45:32.450 [MED] espera generacion->ack ms: p50=216 max=216
+04:45:32.450 [MED] CSV escrito en /home/azureuser/lab4/mediciones/https-ka_n1.csv

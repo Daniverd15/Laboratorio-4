@@ -1,0 +1,16 @@
+$ SAS=$(python common/sas_cli.py "$HUB/devices/$IOTC_DEVICE_ID" "$IOTC_DEVICE_KEY")
+$ curl -i -X POST "https://$HUB/devices/$IOTC_DEVICE_ID/messages/events?api-version=2021-04-12" \
+    -H "Authorization: $SAS" -H "Content-Type: application/json" -H "Content-Encoding: utf-8" \
+    -d '{"temperature":25.1,"humedad":55.0,"illuminance":300}'
+HTTP/1.1 204 No Content
+date: Sun, 04 Oct 2026 05:21:14 GMT
+
+
+--- mismo POST con una firma alterada (depuracion de errores) ---
+HTTP/1.1 401 Unauthorized
+content-length: 257
+content-type: application/json; charset=utf-8
+iothub-errorcode: IotHubUnauthorizedAccess
+date: Sun, 04 Oct 2026 05:21:14 GMT
+
+{"Message":"{\"errorCode\":401002,\"message\":\"Unauthorized access\",\"trackingId\":\"45204C2C7AE142CAA690ECA238815710-G2:-TimeStamp:2026-10-04T05:21:15.190051482Z\",\"timestampUtc\":\"2026-10-04T05:21:15.190051482Z\",\"info\":null}","ExceptionMessage":""}

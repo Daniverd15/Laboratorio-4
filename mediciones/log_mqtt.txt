@@ -1,0 +1,24 @@
+04:43:07.308 [DPS] HTTPS PUT https://global.azure-devices-provisioning.net/0ne00FE0A30/registrations/mqtt-lab4/register  (SAS sr=0ne00FE0A30/registrations/mqtt-lab4)
+04:43:09.436 [DPS] HTTPS GET operations -> 200 status=assigned
+04:43:09.436 [DPS] asignado -> iotc-5ce70e27-5a44-4297-8294-5533402ae4d9.azure-devices.net
+04:43:09.436 [SAS] token generado a mano sr=iotc-5ce70e27-5a44-4297-8294-5533402ae4d9.azure-devices.net/devices/mqtt-lab4 ttl=3600s
+04:43:09.436 [MQTT] Conectando a iotc-5ce70e27-5a44-4297-8294-5533402ae4d9.azure-devices.net:8883 (MQTT sobre TCP, TLS verificado, QoS=1)
+04:43:09.521 [MQTT] CONNACK rc=0 (conectado)
+04:43:09.521 [MQTT] Suscrito a metodos directos: $iothub/methods/POST/#
+04:43:09.610 [TX #1] PUBLISH topic=devices/mqtt-lab4/messages/events/ qos=1 bytes=53 payload={"temperature":31.5,"humedad":66.4,"illuminance":683}
+04:43:09.709 [ACK #1] PUBACK en 100 ms (qos=1)
+04:43:11.612 [TX #2] PUBLISH topic=devices/mqtt-lab4/messages/events/ qos=1 bytes=53 payload={"temperature":22.3,"humedad":41.0,"illuminance":746}
+04:43:11.718 [ACK #2] PUBACK en 106 ms (qos=1)
+04:43:13.614 [TX #3] PUBLISH topic=devices/mqtt-lab4/messages/events/ qos=1 bytes=53 payload={"temperature":22.7,"humedad":48.2,"illuminance":583}
+04:43:13.725 [ACK #3] PUBACK en 110 ms (qos=1)
+04:43:15.617 [TX #4] PUBLISH topic=devices/mqtt-lab4/messages/events/ qos=1 bytes=53 payload={"temperature":21.3,"humedad":57.5,"illuminance":533}
+04:43:15.729 [ACK #4] PUBACK en 112 ms (qos=1)
+04:43:17.619 [TX #5] PUBLISH topic=devices/mqtt-lab4/messages/events/ qos=1 bytes=53 payload={"temperature":22.2,"humedad":53.7,"illuminance":199}
+04:43:17.717 [ACK #5] PUBACK en 98 ms (qos=1)
+04:43:18.719 [MQTT] DESCONECTADO (rc=0). paho reintenta con backoff...
+04:43:18.719 [SAS] token nuevo generado para la reconexion (MQTT no puede renovarlo en caliente)
+04:43:18.719 ---- RESUMEN [mqtt-qos1] ----
+04:43:18.719 [MED] conexion: tcp+tls+connect(connack)         85 ms
+04:43:18.719 [MED] mensajes confirmados=5  payload_bytes prom=53.0
+04:43:18.719 [MED] latencia envio->ack ms: min=98 p50=106 p95=112 max=112 prom=105
+04:43:18.719 [MED] espera generacion->ack ms: p50=106 max=112

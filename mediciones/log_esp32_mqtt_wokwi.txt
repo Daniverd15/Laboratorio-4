@@ -1,0 +1,24 @@
+[WiFi] Conectando a Wokwi-GUEST ...
+...
+[WiFi] OK  IP=10.13.37.2
+[TIME] Sincronizando NTP.................
+[TIME] epoch=1791090769
+[DPS] Iniciando aprovisionamiento...
+[DPS] Conectando a DPS...
+[DPS] Conectado.
+[DPS] status=assigned
+[DPS] assignedHub = iotc-5ce70e27-5a44-4297-8294-5533402ae4d9.azure-devices.net
+[HUB] Conectando al IoT Hub...
+[HUB] TCP+TLS+CONNECT en 3832 ms
+[HUB] Conectado. (Connected en IoT Central)
+[TX #1] PUBLISH qos=0 bytes=48 {"temperature":24,"humedad":40,"illuminance":48}
+[TX #2] PUBLISH qos=0 bytes=48 {"temperature":24,"humedad":40,"illuminance":48}
+[TX #3] PUBLISH qos=0 bytes=48 {"temperature":24,"humedad":40,"illuminance":48}
+[TX #4] PUBLISH qos=0 bytes=48 {"temperature":24,"humedad":40,"illuminance":48}
+[TX #5] PUBLISH qos=0 bytes=48 {"temperature":24,"humedad":40,"illuminance":48}
+[TX #6] PUBLISH qos=0 bytes=48 {"temperature":24,"humedad":40,"illuminance":48}
+[TX #7] PUBLISH qos=0 bytes=48 {"temperature":24,"humedad":40,"illuminance":48}
+[TX #8] PUBLISH qos=0 bytes=48 {"temperature":24,"humedad":40,"illuminance":48}
+[TX #9] PUBLISH qos=0 bytes=48 {"temperature":24,"humedad":40,"illuminance":48}
+[TX #10] PUBLISH qos=0 bytes=48 {"temperature":24,"humedad":40,"illuminance":48}
+Timeout: simulation did not finish in 70000ms

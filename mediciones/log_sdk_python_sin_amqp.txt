@@ -1,0 +1,25 @@
+$ pip show azure-iot-device | head -3
+Name: azure-iot-device
+Version: 2.14.0
+Summary: Microsoft Azure IoT Device Library
+
+$ grep -ril amqp <sdk> | wc -l      # archivos del SDK que mencionan AMQP
+0
+
+$ ls <sdk>/iothub/pipeline | grep -E "mqtt|http|amqp"
+http_map_error.py
+http_path_iothub.py
+http_pipeline.py
+mqtt_pipeline.py
+mqtt_topic_iothub.py
+pipeline_ops_iothub_http.py
+pipeline_stages_iothub_http.py
+pipeline_stages_iothub_mqtt.py
+
+$ python -c signature(IoTHubDeviceClient.create_from_symmetric_key)
+(symmetric_key, hostname, device_id, **kwargs)
+
+$ grep -n websockets <sdk>/iothub/abstract_clients.py | head -3
+39:        "websockets",
+61:        "websockets",
+268:        :param bool websockets: Configuration Option. Default is False. Set to true if using MQTT

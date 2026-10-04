@@ -1,0 +1,7 @@
+# Dependencias de los clientes del Lab 4 (Python 3.9+)
+paho-mqtt>=1.6,<3          # MQTT (linea base del Lab 3)
+python-qpid-proton>=0.40   # AMQP 1.0.  OJO en Linux: el wheel de PyPI NO trae TLS.
+#                            Compilar contra OpenSSL:  sudo apt install build-essential cmake libssl-dev libsasl2-dev python3-dev swig pkg-config
+#                                                      pip install --no-binary python-qpid-proton python-qpid-proton
+#                            (en Windows el wheel usa Schannel y funciona tal cual)
+# HTTPS usa solo la libreria estandar.  Pillow solo para medicion/render_evidencias.py y diagrama.py

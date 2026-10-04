@@ -1,0 +1,13 @@
+04:45:25.912 [DPS] omitido, IOTC_HUB=iotc-5ce70e27-5a44-4297-8294-5533402ae4d9.azure-devices.net
+04:45:25.913 [SAS] token generado a mano sr=iotc-5ce70e27-5a44-4297-8294-5533402ae4d9.azure-devices.net/devices/mqtt-lab4 ttl=3600s
+04:45:25.913 [MQTT] Conectando a iotc-5ce70e27-5a44-4297-8294-5533402ae4d9.azure-devices.net:8883 (MQTT sobre TCP, TLS verificado, QoS=0)
+04:45:25.962 [MQTT] CONNACK rc=0 (conectado)
+04:45:25.962 [MQTT] Suscrito a metodos directos: $iothub/methods/POST/#
+04:45:26.049 [TX #1] PUBLISH topic=devices/mqtt-lab4/messages/events/ qos=0 bytes=53 payload={"temperature":24.9,"humedad":41.7,"illuminance":716}
+04:45:26.049 [SENT #1] enviado a la red (qos=0, sin PUBACK)
+04:45:27.051 [MQTT] DESCONECTADO (rc=0). paho reintenta con backoff...
+04:45:27.051 [SAS] token nuevo generado para la reconexion (MQTT no puede renovarlo en caliente)
+04:45:27.051 ---- RESUMEN [mqtt-qos0] ----
+04:45:27.051 [MED] conexion: tcp+tls+connect(connack)         50 ms
+04:45:27.051 [MED] mensajes confirmados=1  payload_bytes prom=53.0
+04:45:27.051 [MED] CSV escrito en /home/azureuser/lab4/mediciones/mqtt-qos0_n1.csv

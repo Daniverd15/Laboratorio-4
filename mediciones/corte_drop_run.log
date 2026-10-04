@@ -1,0 +1,38 @@
+05:00:54.754 [CORTE] === BLOQUEANDO puerto 8883 (DROP) durante 16s ===
+05:01:10.789 [CORTE] === PUERTO LIBERADO ===
+--- mqtt-qos1 (drop) ---
+05:00:44.896 [MQTT] CONNACK rc=0 (conectado)
+05:00:54.754 [CORTE] === BLOQUEANDO puerto 8883 (DROP) durante 16s ===
+05:01:10.789 [CORTE] === PUERTO LIBERADO ===
+05:01:25.152 [MQTT] DESCONECTADO (rc=0). paho reintenta con backoff...
+05:01:25.153 ---- RESUMEN [mqtt-qos1] ----
+05:01:25.153 [MED] conexion: tcp+tls+connect(connack)         92 ms
+05:01:25.153 [MED] mensajes confirmados=40  payload_bytes prom=53.0
+05:01:25.153 [MED] latencia envio->ack ms: min=97 p50=112 p95=14269 max=16126 prom=3548
+05:01:25.153 [MED] espera generacion->ack ms: p50=112 max=16126
+05:01:25.153 [MED] CSV escrito en /home/azureuser/lab4/mediciones/corte_drop_mqtt-qos1.csv
+05:01:35.168 [CORTE] === BLOQUEANDO puerto 5671 (DROP) durante 16s ===
+05:01:51.202 [CORTE] === PUERTO LIBERADO ===
+--- amqp (drop) ---
+05:01:35.168 [CORTE] === BLOQUEANDO puerto 5671 (DROP) durante 16s ===
+05:01:51.202 [CORTE] === PUERTO LIBERADO ===
+05:02:04.435 ---- RESUMEN [amqp] ----
+05:02:04.436 [MED] conexion: tcp+tls+sasl+open               109 ms
+05:02:04.436 [MED] conexion: cbs_put_token                    13 ms
+05:02:04.436 [MED] conexion: listo_para_enviar               134 ms
+05:02:04.436 [MED] mensajes confirmados=40  payload_bytes prom=53.0
+05:02:04.436 [MED] latencia envio->ack ms: min=97 p50=113 p95=14250 max=16113 prom=3547
+05:02:04.436 [MED] espera generacion->ack ms: p50=144 max=16143
+05:02:04.436 [MED] CSV escrito en /home/azureuser/lab4/mediciones/corte_drop_amqp.csv
+05:02:14.454 [CORTE] === BLOQUEANDO puerto 443 (DROP) durante 16s ===
+05:02:30.489 [CORTE] === PUERTO LIBERADO ===
+--- https-ka (drop) ---
+05:02:14.454 [CORTE] === BLOQUEANDO puerto 443 (DROP) durante 16s ===
+05:02:30.489 [CORTE] === PUERTO LIBERADO ===
+05:02:34.561 [ERROR] TimeoutError: The read operation timed out -> reintento en 1s (mensaje #11 queda en cola)
+05:02:43.678 ---- RESUMEN [https-ka] ----
+05:02:43.678 [MED] conexion: tcp_tls                          48 ms
+05:02:43.678 [MED] mensajes confirmados=40  payload_bytes prom=53.0
+05:02:43.678 [MED] latencia envio->ack ms: min=95 p50=107 p95=128 max=270 prom=112
+05:02:43.678 [MED] espera generacion->ack ms: p50=3801 max=21326
+05:02:43.678 [MED] CSV escrito en /home/azureuser/lab4/mediciones/corte_drop_https-ka.csv

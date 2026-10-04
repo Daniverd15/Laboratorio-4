@@ -1,0 +1,23 @@
+[WiFi] Conectando a Wokwi-GUEST ...
+...
+[WiFi] OK  IP=10.13.37.2
+[TIME] Sincronizando NTP.....
+[TIME] epoch=1791090383
+[DPS] HTTPS PUT https://global.azure-devices-provisioning.net/0ne00FE0A30/registrations/esp32-lab4/register
+[DPS] register -> HTTP 202
+[DPS] GET operations -> HTTP 200 status=assigned
+[DPS] assignedHub = iotc-5ce70e27-5a44-4297-8294-5533402ae4d9.azure-devices.net
+[HTTPS] listo: enviando telemetria por REST
+[TX #1] POST bytes=48 -> HTTP 204 en 4017 ms  {"temperature":24,"humedad":40,"illuminance":48}
+[TX #2] POST bytes=48 -> HTTP 204 en 161 ms  {"temperature":24,"humedad":40,"illuminance":48}
+[TX #3] POST bytes=48 -> HTTP 204 en 162 ms  {"temperature":24,"humedad":40,"illuminance":48}
+[TX #4] POST bytes=48 -> HTTP 204 en 162 ms  {"temperature":24,"humedad":40,"illuminance":48}
+[TX #5] POST bytes=48 -> HTTP 204 en 171 ms  {"temperature":24,"humedad":40,"illuminance":48}
+[TX #6] POST bytes=48 -> HTTP 204 en 182 ms  {"temperature":24,"humedad":40,"illuminance":48}
+[TX #7] POST bytes=48 -> HTTP 204 en 172 ms  {"temperature":24,"humedad":40,"illuminance":48}
+[TX #8] POST bytes=48 -> HTTP 204 en 162 ms  {"temperature":24,"humedad":40,"illuminance":48}
+[TX #9] POST bytes=48 -> HTTP 204 en 162 ms  {"temperature":24,"humedad":40,"illuminance":48}
+[TX #10] POST bytes=48 -> HTTP 204 en 162 ms  {"temperature":24,"humedad":40,"illuminance":48}
+[TX #11] POST bytes=48 -> HTTP 204 en 161 ms  {"temperature":24,"humedad":40,"illuminance":48}
+[TX #12] POST bytes=48 -> HTTP 204 en 175 ms  {"temperature":24,"humedad":40,"illuminance":48}
+Timeout: simulation did not finish in 75000ms

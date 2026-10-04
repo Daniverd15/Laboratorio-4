@@ -1,0 +1,2 @@
+protocolo,n,payload_bytes,ack_ms,e2e_ms
+mqtt-qos1,1,53,104.3,104.3

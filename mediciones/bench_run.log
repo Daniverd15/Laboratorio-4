@@ -1,0 +1,13 @@
+mqtt-qos1,1,1882,4298,14,11
+mqtt-qos0,1,1864,4265,14,11
+mqtt-ws,1,3219,8703,19,19
+amqp,1,3042,6120,20,21
+https-ka,1,1689,4041,10,8
+https-nk,1,1652,4039,9,7
+mqtt-qos1,51,13226,11200,115,112
+mqtt-qos0,51,10388,6782,62,60
+mqtt-ws,51,14779,15653,118,119
+amqp,51,16634,14419,124,125
+https-ka,51,36887,13891,161,108
+https-nk,51,84406,206249,460,362
+Listo: /home/azureuser/lab4/mediciones/bytes.csv y CSV/logs por protocolo

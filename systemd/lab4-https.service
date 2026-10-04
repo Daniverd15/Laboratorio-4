@@ -1,0 +1,19 @@
+[Unit]
+Description=Lab 4 UNAB-Ambiental - HTTPS REST hacia IoT Central
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=azureuser
+WorkingDirectory=/home/azureuser/lab4
+# Credenciales del dispositivo SIN IOTC_HUB (NO versionadas): IOTC_ID_SCOPE, IOTC_DEVICE_ID, IOTC_DEVICE_KEY -> el servicio hace DPS al arrancar
+EnvironmentFile=/home/azureuser/lab4/env/https.svc.env
+Environment=PYTHONUNBUFFERED=1
+Environment=IOTC_SEND_INTERVAL=5
+Environment=IOTC_HTTP_KEEPALIVE=1
+ExecStart=/home/azureuser/lab4/.venv/bin/python /home/azureuser/lab4/https/https_telemetria.py
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

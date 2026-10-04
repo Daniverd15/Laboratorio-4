@@ -1,0 +1,66 @@
+04:58:55.874 [CORTE] === BLOQUEANDO puerto 8883 (REJECT --reject-with tcp-reset) durante 16s ===
+04:59:11.913 [CORTE] === PUERTO LIBERADO ===
+--- mqtt-qos1 (reset) ---
+04:58:45.983 [MQTT] CONNACK rc=0 (conectado)
+04:58:55.874 [CORTE] === BLOQUEANDO puerto 8883 (REJECT --reject-with tcp-reset) durante 16s ===
+04:58:56.085 [MQTT] DESCONECTADO (rc=7). paho reintenta con backoff...
+04:59:11.913 [CORTE] === PUERTO LIBERADO ===
+04:59:13.217 [MQTT] CONNACK rc=0 (conectado)
+04:59:26.223 [MQTT] DESCONECTADO (rc=0). paho reintenta con backoff...
+04:59:26.223 ---- RESUMEN [mqtt-qos1] ----
+04:59:26.223 [MED] conexion: tcp+tls+connect(connack)         60 ms
+04:59:26.224 [MED] mensajes confirmados=40  payload_bytes prom=53.0
+04:59:26.224 [MED] latencia envio->ack ms: min=96 p50=111 p95=15461 max=17315 prom=4061
+04:59:26.224 [MED] espera generacion->ack ms: p50=111 max=17315
+04:59:26.224 [MED] CSV escrito en /home/azureuser/lab4/mediciones/corte_reset_mqtt-qos1.csv
+04:59:36.239 [CORTE] === BLOQUEANDO puerto 5671 (REJECT --reject-with tcp-reset) durante 16s ===
+04:59:52.272 [CORTE] === PUERTO LIBERADO ===
+--- amqp (reset) ---
+04:59:36.239 [CORTE] === BLOQUEANDO puerto 5671 (REJECT --reject-with tcp-reset) durante 16s ===
+04:59:36.321 [AMQP] conexion perdida (socket cerrado)
+04:59:36.322 [AMQP] reintentando en 1s (quedan 1 lecturas sin confirmar en cola)
+04:59:37.353 [AMQP] conexion perdida (socket cerrado)
+04:59:37.353 [AMQP] reintentando en 2s (quedan 2 lecturas sin confirmar en cola)
+04:59:39.383 [AMQP] conexion perdida (socket cerrado)
+04:59:39.383 [AMQP] reintentando en 2s (quedan 4 lecturas sin confirmar en cola)
+04:59:41.411 [AMQP] conexion perdida (socket cerrado)
+04:59:41.411 [AMQP] reintentando en 2s (quedan 6 lecturas sin confirmar en cola)
+04:59:43.442 [AMQP] conexion perdida (socket cerrado)
+04:59:43.443 [AMQP] reintentando en 2s (quedan 8 lecturas sin confirmar en cola)
+04:59:45.489 [AMQP] conexion perdida (socket cerrado)
+04:59:45.489 [AMQP] reintentando en 2s (quedan 10 lecturas sin confirmar en cola)
+04:59:47.520 [AMQP] conexion perdida (socket cerrado)
+04:59:47.520 [AMQP] reintentando en 2s (quedan 12 lecturas sin confirmar en cola)
+04:59:49.553 [AMQP] conexion perdida (socket cerrado)
+04:59:49.553 [AMQP] reintentando en 2s (quedan 14 lecturas sin confirmar en cola)
+04:59:51.582 [AMQP] conexion perdida (socket cerrado)
+04:59:51.582 [AMQP] reintentando en 2s (quedan 16 lecturas sin confirmar en cola)
+04:59:52.272 [CORTE] === PUERTO LIBERADO ===
+05:00:05.467 ---- RESUMEN [amqp] ----
+05:00:05.467 [MED] conexion: tcp+tls+sasl+open                78 ms
+05:00:05.467 [MED] conexion: cbs_put_token                     9 ms
+05:00:05.467 [MED] conexion: listo_para_enviar                96 ms
+05:00:05.467 [MED] mensajes confirmados=40  payload_bytes prom=53.0
+05:00:05.467 [MED] latencia envio->ack ms: min=89 p50=109 p95=261 max=261 prom=172
+05:00:05.467 [MED] espera generacion->ack ms: p50=155 max=17547
+05:00:05.467 [MED] CSV escrito en /home/azureuser/lab4/mediciones/corte_reset_amqp.csv
+05:00:15.494 [CORTE] === BLOQUEANDO puerto 443 (REJECT --reject-with tcp-reset) durante 16s ===
+05:00:31.527 [CORTE] === PUERTO LIBERADO ===
+--- https-ka (reset) ---
+05:00:15.494 [CORTE] === BLOQUEANDO puerto 443 (REJECT --reject-with tcp-reset) durante 16s ===
+05:00:15.582 [ERROR] SSLEOFError: EOF occurred in violation of protocol (_ssl.c:2437) -> reintento en 1s (mensaje #11 queda en cola)
+05:00:16.587 [ERROR] ConnectionRefusedError: [Errno 111] Connection refused -> reintento en 2s (mensaje #11 queda en cola)
+05:00:18.591 [ERROR] ConnectionRefusedError: [Errno 111] Connection refused -> reintento en 2s (mensaje #11 queda en cola)
+05:00:20.598 [ERROR] ConnectionRefusedError: [Errno 111] Connection refused -> reintento en 2s (mensaje #11 queda en cola)
+05:00:22.602 [ERROR] ConnectionRefusedError: [Errno 111] Connection refused -> reintento en 2s (mensaje #11 queda en cola)
+05:00:24.608 [ERROR] ConnectionRefusedError: [Errno 111] Connection refused -> reintento en 2s (mensaje #11 queda en cola)
+05:00:26.614 [ERROR] ConnectionRefusedError: [Errno 111] Connection refused -> reintento en 2s (mensaje #11 queda en cola)
+05:00:28.619 [ERROR] ConnectionRefusedError: [Errno 111] Connection refused -> reintento en 2s (mensaje #11 queda en cola)
+05:00:30.623 [ERROR] ConnectionRefusedError: [Errno 111] Connection refused -> reintento en 2s (mensaje #11 queda en cola)
+05:00:31.527 [CORTE] === PUERTO LIBERADO ===
+05:00:44.735 ---- RESUMEN [https-ka] ----
+05:00:44.735 [MED] conexion: tcp_tls                          84 ms
+05:00:44.735 [MED] mensajes confirmados=40  payload_bytes prom=53.0
+05:00:44.735 [MED] latencia envio->ack ms: min=94 p50=108 p95=117 max=253 prom=110
+05:00:44.735 [MED] espera generacion->ack ms: p50=205 max=17284
+05:00:44.735 [MED] CSV escrito en /home/azureuser/lab4/mediciones/corte_reset_https-ka.csv

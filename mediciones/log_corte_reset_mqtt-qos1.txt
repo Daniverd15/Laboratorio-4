@@ -1,0 +1,99 @@
+04:58:45.923 [DPS] omitido, IOTC_HUB=iotc-5ce70e27-5a44-4297-8294-5533402ae4d9.azure-devices.net
+04:58:45.923 [SAS] token generado a mano sr=iotc-5ce70e27-5a44-4297-8294-5533402ae4d9.azure-devices.net/devices/mqtt-lab4 ttl=3600s
+04:58:45.923 [MQTT] Conectando a iotc-5ce70e27-5a44-4297-8294-5533402ae4d9.azure-devices.net:8883 (MQTT sobre TCP, TLS verificado, QoS=1)
+04:58:45.983 [MQTT] CONNACK rc=0 (conectado)
+04:58:45.983 [MQTT] Suscrito a metodos directos: $iothub/methods/POST/#
+04:58:46.070 [TX #1] PUBLISH topic=devices/mqtt-lab4/messages/events/ qos=1 bytes=53 payload={"temperature":25.2,"humedad":54.1,"illuminance":371}
+04:58:46.176 [ACK #1] PUBACK en 106 ms (qos=1)
+04:58:47.072 [TX #2] PUBLISH topic=devices/mqtt-lab4/messages/events/ qos=1 bytes=53 payload={"temperature":26.3,"humedad":47.7,"illuminance":183}
+04:58:47.171 [ACK #2] PUBACK en 99 ms (qos=1)
+04:58:48.073 [TX #3] PUBLISH topic=devices/mqtt-lab4/messages/events/ qos=1 bytes=53 payload={"temperature":26.8,"humedad":51.8,"illuminance":397}
+04:58:48.182 [ACK #3] PUBACK en 109 ms (qos=1)
+04:58:49.075 [TX #4] PUBLISH topic=devices/mqtt-lab4/messages/events/ qos=1 bytes=53 payload={"temperature":27.8,"humedad":65.8,"illuminance":511}
+04:58:49.175 [ACK #4] PUBACK en 101 ms (qos=1)
+04:58:50.076 [TX #5] PUBLISH topic=devices/mqtt-lab4/messages/events/ qos=1 bytes=53 payload={"temperature":23.6,"humedad":69.1,"illuminance":301}
+04:58:50.173 [ACK #5] PUBACK en 97 ms (qos=1)
+04:58:51.077 [TX #6] PUBLISH topic=devices/mqtt-lab4/messages/events/ qos=1 bytes=53 payload={"temperature":27.5,"humedad":69.2,"illuminance":154}
+04:58:51.184 [ACK #6] PUBACK en 107 ms (qos=1)
+04:58:52.079 [TX #7] PUBLISH topic=devices/mqtt-lab4/messages/events/ qos=1 bytes=53 payload={"temperature":25.4,"humedad":40.1,"illuminance":213}
+04:58:52.178 [ACK #7] PUBACK en 99 ms (qos=1)
+04:58:53.080 [TX #8] PUBLISH topic=devices/mqtt-lab4/messages/events/ qos=1 bytes=53 payload={"temperature":27.7,"humedad":45.0,"illuminance":548}
+04:58:53.189 [ACK #8] PUBACK en 109 ms (qos=1)
+04:58:54.082 [TX #9] PUBLISH topic=devices/mqtt-lab4/messages/events/ qos=1 bytes=53 payload={"temperature":28.0,"humedad":69.4,"illuminance":658}
+04:58:54.182 [ACK #9] PUBACK en 100 ms (qos=1)
+04:58:55.083 [TX #10] PUBLISH topic=devices/mqtt-lab4/messages/events/ qos=1 bytes=53 payload={"temperature":24.2,"humedad":47.4,"illuminance":688}
+04:58:55.193 [ACK #10] PUBACK en 110 ms (qos=1)
+04:58:55.874 [CORTE] === BLOQUEANDO puerto 8883 (REJECT --reject-with tcp-reset) durante 16s ===
+04:58:56.084 [TX #11] PUBLISH topic=devices/mqtt-lab4/messages/events/ qos=1 bytes=53 payload={"temperature":30.5,"humedad":41.6,"illuminance":689}
+04:58:56.085 [MQTT] DESCONECTADO (rc=7). paho reintenta con backoff...
+04:58:56.085 [SAS] token nuevo generado para la reconexion (MQTT no puede renovarlo en caliente)
+04:58:57.085 [TX #12] PUBLISH topic=devices/mqtt-lab4/messages/events/ qos=1 bytes=53 payload={"temperature":31.4,"humedad":56.5,"illuminance":348}
+04:58:58.087 [TX #13] PUBLISH topic=devices/mqtt-lab4/messages/events/ qos=1 bytes=53 payload={"temperature":31.8,"humedad":49.6,"illuminance":534}
+04:58:59.088 [TX #14] PUBLISH topic=devices/mqtt-lab4/messages/events/ qos=1 bytes=53 payload={"temperature":26.4,"humedad":41.8,"illuminance":274}
+04:59:00.089 [TX #15] PUBLISH topic=devices/mqtt-lab4/messages/events/ qos=1 bytes=53 payload={"temperature":27.9,"humedad":59.0,"illuminance":585}
+04:59:01.090 [TX #16] PUBLISH topic=devices/mqtt-lab4/messages/events/ qos=1 bytes=53 payload={"temperature":21.1,"humedad":51.7,"illuminance":511}
+04:59:02.092 [TX #17] PUBLISH topic=devices/mqtt-lab4/messages/events/ qos=1 bytes=53 payload={"temperature":23.8,"humedad":68.9,"illuminance":242}
+04:59:03.093 [TX #18] PUBLISH topic=devices/mqtt-lab4/messages/events/ qos=1 bytes=53 payload={"temperature":29.8,"humedad":40.9,"illuminance":153}
+04:59:04.094 [TX #19] PUBLISH topic=devices/mqtt-lab4/messages/events/ qos=1 bytes=53 payload={"temperature":27.6,"humedad":51.6,"illuminance":641}
+04:59:05.096 [TX #20] PUBLISH topic=devices/mqtt-lab4/messages/events/ qos=1 bytes=53 payload={"temperature":30.9,"humedad":47.4,"illuminance":274}
+04:59:06.097 [TX #21] PUBLISH topic=devices/mqtt-lab4/messages/events/ qos=1 bytes=53 payload={"temperature":25.9,"humedad":69.9,"illuminance":232}
+04:59:07.098 [TX #22] PUBLISH topic=devices/mqtt-lab4/messages/events/ qos=1 bytes=53 payload={"temperature":25.1,"humedad":56.3,"illuminance":234}
+04:59:08.099 [TX #23] PUBLISH topic=devices/mqtt-lab4/messages/events/ qos=1 bytes=53 payload={"temperature":29.8,"humedad":40.8,"illuminance":660}
+04:59:09.101 [TX #24] PUBLISH topic=devices/mqtt-lab4/messages/events/ qos=1 bytes=53 payload={"temperature":20.9,"humedad":56.8,"illuminance":575}
+04:59:10.102 [TX #25] PUBLISH topic=devices/mqtt-lab4/messages/events/ qos=1 bytes=53 payload={"temperature":22.3,"humedad":58.4,"illuminance":391}
+04:59:11.103 [TX #26] PUBLISH topic=devices/mqtt-lab4/messages/events/ qos=1 bytes=53 payload={"temperature":30.2,"humedad":56.5,"illuminance":744}
+04:59:11.913 [CORTE] === PUERTO LIBERADO ===
+04:59:12.104 [TX #27] PUBLISH topic=devices/mqtt-lab4/messages/events/ qos=1 bytes=53 payload={"temperature":26.8,"humedad":63.8,"illuminance":232}
+04:59:13.106 [TX #28] PUBLISH topic=devices/mqtt-lab4/messages/events/ qos=1 bytes=53 payload={"temperature":32.0,"humedad":62.9,"illuminance":671}
+04:59:13.217 [MQTT] CONNACK rc=0 (conectado)
+04:59:13.217 [MQTT] Suscrito a metodos directos: $iothub/methods/POST/#
+04:59:13.399 [ACK #11] PUBACK en 17315 ms (qos=1)
+04:59:13.498 [ACK #12] PUBACK en 16412 ms (qos=1)
+04:59:13.498 [ACK #13] PUBACK en 15411 ms (qos=1)
+04:59:13.498 [ACK #14] PUBACK en 14410 ms (qos=1)
+04:59:13.498 [ACK #15] PUBACK en 13409 ms (qos=1)
+04:59:13.498 [ACK #16] PUBACK en 12407 ms (qos=1)
+04:59:13.498 [ACK #17] PUBACK en 11406 ms (qos=1)
+04:59:13.498 [ACK #18] PUBACK en 10405 ms (qos=1)
+04:59:13.498 [ACK #19] PUBACK en 9404 ms (qos=1)
+04:59:13.498 [ACK #20] PUBACK en 8402 ms (qos=1)
+04:59:13.498 [ACK #21] PUBACK en 7401 ms (qos=1)
+04:59:13.498 [ACK #22] PUBACK en 6400 ms (qos=1)
+04:59:13.498 [ACK #23] PUBACK en 5399 ms (qos=1)
+04:59:13.498 [ACK #24] PUBACK en 4397 ms (qos=1)
+04:59:13.498 [ACK #25] PUBACK en 3396 ms (qos=1)
+04:59:13.498 [ACK #26] PUBACK en 2395 ms (qos=1)
+04:59:13.498 [ACK #27] PUBACK en 1394 ms (qos=1)
+04:59:13.498 [ACK #28] PUBACK en 393 ms (qos=1)
+04:59:14.107 [TX #29] PUBLISH topic=devices/mqtt-lab4/messages/events/ qos=1 bytes=53 payload={"temperature":30.7,"humedad":56.7,"illuminance":334}
+04:59:14.218 [ACK #29] PUBACK en 111 ms (qos=1)
+04:59:15.109 [TX #30] PUBLISH topic=devices/mqtt-lab4/messages/events/ qos=1 bytes=53 payload={"temperature":27.3,"humedad":55.1,"illuminance":697}
+04:59:15.211 [ACK #30] PUBACK en 102 ms (qos=1)
+04:59:16.110 [TX #31] PUBLISH topic=devices/mqtt-lab4/messages/events/ qos=1 bytes=53 payload={"temperature":30.7,"humedad":47.3,"illuminance":413}
+04:59:16.206 [ACK #31] PUBACK en 96 ms (qos=1)
+04:59:17.111 [TX #32] PUBLISH topic=devices/mqtt-lab4/messages/events/ qos=1 bytes=53 payload={"temperature":31.9,"humedad":57.8,"illuminance":360}
+04:59:17.215 [ACK #32] PUBACK en 104 ms (qos=1)
+04:59:18.113 [TX #33] PUBLISH topic=devices/mqtt-lab4/messages/events/ qos=1 bytes=53 payload={"temperature":24.4,"humedad":66.5,"illuminance":174}
+04:59:18.209 [ACK #33] PUBACK en 96 ms (qos=1)
+04:59:19.114 [TX #34] PUBLISH topic=devices/mqtt-lab4/messages/events/ qos=1 bytes=53 payload={"temperature":26.7,"humedad":49.5,"illuminance":407}
+04:59:19.219 [ACK #34] PUBACK en 105 ms (qos=1)
+04:59:20.116 [TX #35] PUBLISH topic=devices/mqtt-lab4/messages/events/ qos=1 bytes=53 payload={"temperature":23.2,"humedad":51.5,"illuminance":377}
+04:59:20.215 [ACK #35] PUBACK en 100 ms (qos=1)
+04:59:21.117 [TX #36] PUBLISH topic=devices/mqtt-lab4/messages/events/ qos=1 bytes=53 payload={"temperature":20.9,"humedad":51.5,"illuminance":550}
+04:59:21.227 [ACK #36] PUBACK en 110 ms (qos=1)
+04:59:22.119 [TX #37] PUBLISH topic=devices/mqtt-lab4/messages/events/ qos=1 bytes=53 payload={"temperature":25.3,"humedad":69.4,"illuminance":445}
+04:59:22.221 [ACK #37] PUBACK en 103 ms (qos=1)
+04:59:23.120 [TX #38] PUBLISH topic=devices/mqtt-lab4/messages/events/ qos=1 bytes=53 payload={"temperature":31.6,"humedad":68.3,"illuminance":266}
+04:59:23.231 [ACK #38] PUBACK en 111 ms (qos=1)
+04:59:24.121 [TX #39] PUBLISH topic=devices/mqtt-lab4/messages/events/ qos=1 bytes=53 payload={"temperature":31.6,"humedad":42.6,"illuminance":662}
+04:59:24.228 [ACK #39] PUBACK en 106 ms (qos=1)
+04:59:25.123 [TX #40] PUBLISH topic=devices/mqtt-lab4/messages/events/ qos=1 bytes=53 payload={"temperature":20.5,"humedad":64.0,"illuminance":271}
+04:59:25.222 [ACK #40] PUBACK en 99 ms (qos=1)
+04:59:26.223 [MQTT] DESCONECTADO (rc=0). paho reintenta con backoff...
+04:59:26.223 [SAS] token nuevo generado para la reconexion (MQTT no puede renovarlo en caliente)
+04:59:26.223 ---- RESUMEN [mqtt-qos1] ----
+04:59:26.223 [MED] conexion: tcp+tls+connect(connack)         60 ms
+04:59:26.224 [MED] mensajes confirmados=40  payload_bytes prom=53.0
+04:59:26.224 [MED] latencia envio->ack ms: min=96 p50=111 p95=15461 max=17315 prom=4061
+04:59:26.224 [MED] espera generacion->ack ms: p50=111 max=17315
+04:59:26.224 [MED] CSV escrito en /home/azureuser/lab4/mediciones/corte_reset_mqtt-qos1.csv

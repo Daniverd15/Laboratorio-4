@@ -1,0 +1,111 @@
+04:49:54.250 [DPS] omitido, IOTC_HUB=iotc-5ce70e27-5a44-4297-8294-5533402ae4d9.azure-devices.net
+04:49:54.250 [SAS] token generado a mano sr=iotc-5ce70e27-5a44-4297-8294-5533402ae4d9.azure-devices.net/devices/https-lab4 ttl=3600s
+04:49:54.250 [HTTPS] POST https://iotc-5ce70e27-5a44-4297-8294-5533402ae4d9.azure-devices.net/devices/https-lab4/messages/events?api-version=2021-04-12  keep-alive=False
+04:49:54.325 [HTTPS] TCP+TLS establecido en 73 ms (TLSv1.2, ECDHE-RSA-AES128-GCM-SHA256)
+04:49:54.517 [TX #1] POST bytes=53 -> HTTP 204 en 191 ms (+73 ms TLS)  payload={"temperature":23.1,"humedad":42.8,"illuminance":228}
+04:49:55.335 [HTTPS] TCP+TLS establecido en 67 ms (TLSv1.2, ECDHE-RSA-AES128-GCM-SHA256)
+04:49:55.481 [TX #2] POST bytes=53 -> HTTP 204 en 146 ms (+67 ms TLS)  payload={"temperature":20.3,"humedad":69.9,"illuminance":315}
+04:49:56.349 [HTTPS] TCP+TLS establecido en 65 ms (TLSv1.2, ECDHE-RSA-AES128-GCM-SHA256)
+04:49:56.514 [TX #3] POST bytes=53 -> HTTP 204 en 165 ms (+65 ms TLS)  payload={"temperature":22.4,"humedad":45.7,"illuminance":336}
+04:49:57.336 [HTTPS] TCP+TLS establecido en 70 ms (TLSv1.2, ECDHE-RSA-AES128-GCM-SHA256)
+04:49:57.506 [TX #4] POST bytes=53 -> HTTP 204 en 170 ms (+70 ms TLS)  payload={"temperature":31.8,"humedad":49.6,"illuminance":164}
+04:49:58.335 [HTTPS] TCP+TLS establecido en 77 ms (TLSv1.2, ECDHE-RSA-AES128-GCM-SHA256)
+04:49:58.520 [TX #5] POST bytes=53 -> HTTP 204 en 185 ms (+77 ms TLS)  payload={"temperature":29.0,"humedad":45.4,"illuminance":167}
+04:49:59.337 [HTTPS] TCP+TLS establecido en 66 ms (TLSv1.2, ECDHE-RSA-AES128-GCM-SHA256)
+04:49:59.467 [TX #6] POST bytes=53 -> HTTP 204 en 130 ms (+66 ms TLS)  payload={"temperature":28.6,"humedad":54.1,"illuminance":291}
+04:50:00.306 [HTTPS] TCP+TLS establecido en 37 ms (TLSv1.2, ECDHE-RSA-AES128-GCM-SHA256)
+04:50:00.496 [TX #7] POST bytes=53 -> HTTP 204 en 190 ms (+37 ms TLS)  payload={"temperature":23.1,"humedad":66.6,"illuminance":212}
+04:50:01.330 [HTTPS] TCP+TLS establecido en 32 ms (TLSv1.2, ECDHE-RSA-AES128-GCM-SHA256)
+04:50:01.505 [TX #8] POST bytes=53 -> HTTP 204 en 175 ms (+32 ms TLS)  payload={"temperature":26.6,"humedad":59.9,"illuminance":599}
+04:50:02.367 [HTTPS] TCP+TLS establecido en 60 ms (TLSv1.2, ECDHE-RSA-AES128-GCM-SHA256)
+04:50:02.519 [TX #9] POST bytes=53 -> HTTP 204 en 153 ms (+60 ms TLS)  payload={"temperature":25.3,"humedad":46.9,"illuminance":164}
+04:50:03.311 [HTTPS] TCP+TLS establecido en 39 ms (TLSv1.2, ECDHE-RSA-AES128-GCM-SHA256)
+04:50:03.501 [TX #10] POST bytes=53 -> HTTP 204 en 190 ms (+39 ms TLS)  payload={"temperature":26.0,"humedad":59.8,"illuminance":601}
+04:50:04.336 [HTTPS] TCP+TLS establecido en 33 ms (TLSv1.2, ECDHE-RSA-AES128-GCM-SHA256)
+04:50:04.518 [TX #11] POST bytes=53 -> HTTP 204 en 183 ms (+33 ms TLS)  payload={"temperature":22.6,"humedad":56.7,"illuminance":183}
+04:50:05.302 [HTTPS] TCP+TLS establecido en 31 ms (TLSv1.2, ECDHE-RSA-AES128-GCM-SHA256)
+04:50:05.484 [TX #12] POST bytes=53 -> HTTP 204 en 182 ms (+31 ms TLS)  payload={"temperature":28.5,"humedad":55.5,"illuminance":692}
+04:50:06.355 [HTTPS] TCP+TLS establecido en 69 ms (TLSv1.2, ECDHE-RSA-AES128-GCM-SHA256)
+04:50:06.505 [TX #13] POST bytes=53 -> HTTP 204 en 149 ms (+69 ms TLS)  payload={"temperature":30.3,"humedad":58.6,"illuminance":369}
+04:50:07.341 [HTTPS] TCP+TLS establecido en 34 ms (TLSv1.2, ECDHE-RSA-AES128-GCM-SHA256)
+04:50:07.484 [TX #14] POST bytes=53 -> HTTP 204 en 144 ms (+34 ms TLS)  payload={"temperature":25.2,"humedad":41.4,"illuminance":228}
+04:50:08.321 [HTTPS] TCP+TLS establecido en 35 ms (TLSv1.2, ECDHE-RSA-AES128-GCM-SHA256)
+04:50:08.493 [TX #15] POST bytes=53 -> HTTP 204 en 172 ms (+35 ms TLS)  payload={"temperature":22.1,"humedad":47.6,"illuminance":626}
+04:50:09.336 [HTTPS] TCP+TLS establecido en 41 ms (TLSv1.2, ECDHE-RSA-AES128-GCM-SHA256)
+04:50:09.490 [TX #16] POST bytes=53 -> HTTP 204 en 154 ms (+41 ms TLS)  payload={"temperature":21.2,"humedad":69.9,"illuminance":404}
+04:50:10.329 [HTTPS] TCP+TLS establecido en 38 ms (TLSv1.2, ECDHE-RSA-AES128-GCM-SHA256)
+04:50:10.431 [TX #17] POST bytes=53 -> HTTP 204 en 102 ms (+38 ms TLS)  payload={"temperature":20.5,"humedad":66.6,"illuminance":410}
+04:50:11.312 [HTTPS] TCP+TLS establecido en 28 ms (TLSv1.2, ECDHE-RSA-AES128-GCM-SHA256)
+04:50:11.410 [TX #18] POST bytes=53 -> HTTP 204 en 98 ms (+28 ms TLS)  payload={"temperature":24.0,"humedad":53.4,"illuminance":302}
+04:50:12.373 [HTTPS] TCP+TLS establecido en 60 ms (TLSv1.2, ECDHE-RSA-AES128-GCM-SHA256)
+04:50:12.543 [TX #19] POST bytes=53 -> HTTP 204 en 170 ms (+60 ms TLS)  payload={"temperature":24.5,"humedad":45.0,"illuminance":531}
+04:50:13.329 [HTTPS] TCP+TLS establecido en 35 ms (TLSv1.2, ECDHE-RSA-AES128-GCM-SHA256)
+04:50:13.476 [TX #20] POST bytes=53 -> HTTP 204 en 146 ms (+35 ms TLS)  payload={"temperature":20.4,"humedad":40.3,"illuminance":315}
+04:50:14.312 [HTTPS] TCP+TLS establecido en 34 ms (TLSv1.2, ECDHE-RSA-AES128-GCM-SHA256)
+04:50:14.477 [TX #21] POST bytes=53 -> HTTP 204 en 165 ms (+34 ms TLS)  payload={"temperature":22.2,"humedad":52.8,"illuminance":477}
+04:50:15.317 [HTTPS] TCP+TLS establecido en 38 ms (TLSv1.2, ECDHE-RSA-AES128-GCM-SHA256)
+04:50:15.512 [TX #22] POST bytes=53 -> HTTP 204 en 195 ms (+38 ms TLS)  payload={"temperature":23.7,"humedad":51.6,"illuminance":521}
+04:50:16.345 [HTTPS] TCP+TLS establecido en 30 ms (TLSv1.2, ECDHE-RSA-AES128-GCM-SHA256)
+04:50:16.497 [TX #23] POST bytes=53 -> HTTP 204 en 152 ms (+30 ms TLS)  payload={"temperature":31.7,"humedad":54.3,"illuminance":577}
+04:50:17.338 [HTTPS] TCP+TLS establecido en 39 ms (TLSv1.2, ECDHE-RSA-AES128-GCM-SHA256)
+04:50:17.525 [TX #24] POST bytes=53 -> HTTP 204 en 187 ms (+39 ms TLS)  payload={"temperature":31.3,"humedad":61.9,"illuminance":369}
+04:50:18.363 [HTTPS] TCP+TLS establecido en 36 ms (TLSv1.2, ECDHE-RSA-AES128-GCM-SHA256)
+04:50:18.543 [TX #25] POST bytes=53 -> HTTP 204 en 180 ms (+36 ms TLS)  payload={"temperature":29.9,"humedad":51.4,"illuminance":184}
+04:50:19.335 [HTTPS] TCP+TLS establecido en 41 ms (TLSv1.2, ECDHE-RSA-AES128-GCM-SHA256)
+04:50:19.474 [TX #26] POST bytes=53 -> HTTP 204 en 139 ms (+41 ms TLS)  payload={"temperature":29.1,"humedad":52.8,"illuminance":259}
+04:50:20.369 [HTTPS] TCP+TLS establecido en 43 ms (TLSv1.2, ECDHE-RSA-AES128-GCM-SHA256)
+04:50:20.548 [TX #27] POST bytes=53 -> HTTP 204 en 179 ms (+43 ms TLS)  payload={"temperature":30.3,"humedad":58.4,"illuminance":637}
+04:50:21.339 [HTTPS] TCP+TLS establecido en 39 ms (TLSv1.2, ECDHE-RSA-AES128-GCM-SHA256)
+04:50:21.487 [TX #28] POST bytes=53 -> HTTP 204 en 148 ms (+39 ms TLS)  payload={"temperature":30.9,"humedad":53.1,"illuminance":403}
+04:50:22.322 [HTTPS] TCP+TLS establecido en 33 ms (TLSv1.2, ECDHE-RSA-AES128-GCM-SHA256)
+04:50:22.512 [TX #29] POST bytes=53 -> HTTP 204 en 189 ms (+33 ms TLS)  payload={"temperature":28.4,"humedad":42.3,"illuminance":210}
+04:50:23.357 [HTTPS] TCP+TLS establecido en 44 ms (TLSv1.2, ECDHE-RSA-AES128-GCM-SHA256)
+04:50:23.512 [TX #30] POST bytes=53 -> HTTP 204 en 155 ms (+44 ms TLS)  payload={"temperature":21.2,"humedad":57.6,"illuminance":640}
+04:50:24.351 [HTTPS] TCP+TLS establecido en 37 ms (TLSv1.2, ECDHE-RSA-AES128-GCM-SHA256)
+04:50:24.529 [TX #31] POST bytes=53 -> HTTP 204 en 178 ms (+37 ms TLS)  payload={"temperature":24.0,"humedad":52.1,"illuminance":557}
+04:50:25.365 [HTTPS] TCP+TLS establecido en 34 ms (TLSv1.2, ECDHE-RSA-AES128-GCM-SHA256)
+04:50:25.512 [TX #32] POST bytes=53 -> HTTP 204 en 146 ms (+34 ms TLS)  payload={"temperature":26.6,"humedad":58.8,"illuminance":530}
+04:50:26.347 [HTTPS] TCP+TLS establecido en 33 ms (TLSv1.2, ECDHE-RSA-AES128-GCM-SHA256)
+04:50:26.519 [TX #33] POST bytes=53 -> HTTP 204 en 172 ms (+33 ms TLS)  payload={"temperature":21.1,"humedad":65.5,"illuminance":160}
+04:50:27.352 [HTTPS] TCP+TLS establecido en 31 ms (TLSv1.2, ECDHE-RSA-AES128-GCM-SHA256)
+04:50:27.495 [TX #34] POST bytes=53 -> HTTP 204 en 142 ms (+31 ms TLS)  payload={"temperature":26.4,"humedad":50.6,"illuminance":648}
+04:50:28.335 [HTTPS] TCP+TLS establecido en 39 ms (TLSv1.2, ECDHE-RSA-AES128-GCM-SHA256)
+04:50:28.489 [TX #35] POST bytes=53 -> HTTP 204 en 153 ms (+39 ms TLS)  payload={"temperature":22.4,"humedad":59.6,"illuminance":442}
+04:50:29.375 [HTTPS] TCP+TLS establecido en 34 ms (TLSv1.2, ECDHE-RSA-AES128-GCM-SHA256)
+04:50:29.521 [TX #36] POST bytes=53 -> HTTP 204 en 146 ms (+34 ms TLS)  payload={"temperature":20.9,"humedad":66.9,"illuminance":491}
+04:50:30.357 [HTTPS] TCP+TLS establecido en 34 ms (TLSv1.2, ECDHE-RSA-AES128-GCM-SHA256)
+04:50:30.510 [TX #37] POST bytes=53 -> HTTP 204 en 153 ms (+34 ms TLS)  payload={"temperature":27.8,"humedad":59.9,"illuminance":685}
+04:50:31.346 [HTTPS] TCP+TLS establecido en 34 ms (TLSv1.2, ECDHE-RSA-AES128-GCM-SHA256)
+04:50:31.482 [TX #38] POST bytes=53 -> HTTP 204 en 136 ms (+34 ms TLS)  payload={"temperature":24.3,"humedad":65.5,"illuminance":269}
+04:50:32.374 [HTTPS] TCP+TLS establecido en 40 ms (TLSv1.2, ECDHE-RSA-AES128-GCM-SHA256)
+04:50:32.522 [TX #39] POST bytes=53 -> HTTP 204 en 148 ms (+40 ms TLS)  payload={"temperature":26.6,"humedad":40.4,"illuminance":318}
+04:50:33.364 [HTTPS] TCP+TLS establecido en 40 ms (TLSv1.2, ECDHE-RSA-AES128-GCM-SHA256)
+04:50:33.507 [TX #40] POST bytes=53 -> HTTP 204 en 143 ms (+40 ms TLS)  payload={"temperature":22.5,"humedad":49.9,"illuminance":530}
+04:50:34.345 [HTTPS] TCP+TLS establecido en 36 ms (TLSv1.2, ECDHE-RSA-AES128-GCM-SHA256)
+04:50:34.513 [TX #41] POST bytes=53 -> HTTP 204 en 168 ms (+36 ms TLS)  payload={"temperature":23.5,"humedad":65.7,"illuminance":497}
+04:50:35.350 [HTTPS] TCP+TLS establecido en 35 ms (TLSv1.2, ECDHE-RSA-AES128-GCM-SHA256)
+04:50:35.496 [TX #42] POST bytes=53 -> HTTP 204 en 145 ms (+35 ms TLS)  payload={"temperature":20.1,"humedad":41.1,"illuminance":391}
+04:50:36.383 [HTTPS] TCP+TLS establecido en 35 ms (TLSv1.2, ECDHE-RSA-AES128-GCM-SHA256)
+04:50:36.579 [TX #43] POST bytes=53 -> HTTP 204 en 196 ms (+35 ms TLS)  payload={"temperature":21.7,"humedad":54.7,"illuminance":345}
+04:50:37.366 [HTTPS] TCP+TLS establecido en 35 ms (TLSv1.2, ECDHE-RSA-AES128-GCM-SHA256)
+04:50:37.471 [TX #44] POST bytes=53 -> HTTP 204 en 104 ms (+35 ms TLS)  payload={"temperature":30.2,"humedad":52.2,"illuminance":565}
+04:50:38.361 [HTTPS] TCP+TLS establecido en 38 ms (TLSv1.2, ECDHE-RSA-AES128-GCM-SHA256)
+04:50:38.552 [TX #45] POST bytes=53 -> HTTP 204 en 191 ms (+38 ms TLS)  payload={"temperature":28.7,"humedad":55.2,"illuminance":634}
+04:50:39.336 [HTTPS] TCP+TLS establecido en 33 ms (TLSv1.2, ECDHE-RSA-AES128-GCM-SHA256)
+04:50:39.487 [TX #46] POST bytes=53 -> HTTP 204 en 151 ms (+33 ms TLS)  payload={"temperature":31.2,"humedad":63.3,"illuminance":648}
+04:50:40.383 [HTTPS] TCP+TLS establecido en 43 ms (TLSv1.2, ECDHE-RSA-AES128-GCM-SHA256)
+04:50:40.528 [TX #47] POST bytes=53 -> HTTP 204 en 146 ms (+43 ms TLS)  payload={"temperature":29.6,"humedad":55.1,"illuminance":458}
+04:50:41.361 [HTTPS] TCP+TLS establecido en 31 ms (TLSv1.2, ECDHE-RSA-AES128-GCM-SHA256)
+04:50:41.462 [TX #48] POST bytes=53 -> HTTP 204 en 101 ms (+31 ms TLS)  payload={"temperature":21.9,"humedad":51.8,"illuminance":369}
+04:50:42.348 [HTTPS] TCP+TLS establecido en 33 ms (TLSv1.2, ECDHE-RSA-AES128-GCM-SHA256)
+04:50:42.444 [TX #49] POST bytes=53 -> HTTP 204 en 97 ms (+33 ms TLS)  payload={"temperature":21.1,"humedad":61.0,"illuminance":302}
+04:50:43.384 [HTTPS] TCP+TLS establecido en 37 ms (TLSv1.2, ECDHE-RSA-AES128-GCM-SHA256)
+04:50:43.482 [TX #50] POST bytes=53 -> HTTP 204 en 97 ms (+37 ms TLS)  payload={"temperature":24.1,"humedad":44.4,"illuminance":154}
+04:50:44.367 [HTTPS] TCP+TLS establecido en 33 ms (TLSv1.2, ECDHE-RSA-AES128-GCM-SHA256)
+04:50:44.536 [TX #51] POST bytes=53 -> HTTP 204 en 169 ms (+33 ms TLS)  payload={"temperature":23.0,"humedad":61.6,"illuminance":161}
+04:50:44.536 ---- RESUMEN [https-nokeepalive] ----
+04:50:44.536 [MED] conexion: tcp_tls                          73 ms
+04:50:44.536 [MED] mensajes confirmados=51  payload_bytes prom=53.0
+04:50:44.536 [MED] latencia envio->ack ms: min=127 p50=199 p95=236 max=265 prom=198
+04:50:44.536 [MED] espera generacion->ack ms: p50=225 max=280
+04:50:44.536 [MED] CSV escrito en /home/azureuser/lab4/mediciones/https-nk_n51.csv
